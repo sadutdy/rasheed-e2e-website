@@ -192,17 +192,108 @@ section{padding:84px 0}
   .tb.on i{animation:none;width:100%}
 }
 
-.pk{background:var(--ink);color:#fff;position:relative;overflow:hidden}
-.pk .grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-.pk h2{font-size:clamp(1.8rem,4vw,2.7rem);margin:10px 0 16px}
-.pk p{color:#b4bfd4;margin:0 0 28px;max-width:30em}
-.tiles{display:grid;grid-template-columns:1fr 1fr;border:1px solid rgba(255,255,255,.14);border-radius:14px;overflow:hidden}
-.tile{padding:24px 22px;border:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.02)}
-.tile span{color:var(--teal);font-size:.75rem;letter-spacing:.14em;font-weight:600}
-.tile h3{font-size:1.1rem;margin:8px 0 6px}
-.tile p{margin:0;font-size:.88rem;color:#9fabc3}
-@media(max-width:860px){.pk .grid{grid-template-columns:1fr;gap:32px}}
-@media(max-width:480px){.tiles{grid-template-columns:1fr}}
+/* packages */
+.pkg-sec{background:var(--bg)}
+.pkg-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:26px}
+.demo-pill{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#1a1405;background:var(--gold);padding:6px 12px;border-radius:999px}
+.pkg-tools{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;margin-bottom:22px}
+.pf{display:flex;flex-wrap:wrap;gap:8px}
+.pf button{font:inherit;font-size:.88rem;font-weight:600;padding:9px 16px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--text);cursor:pointer;transition:.15s}
+.pf button:hover{border-color:var(--gold)}
+.pf button.on{background:var(--ink);border-color:var(--ink);color:#fff}
+@media (prefers-color-scheme: dark){.pf button.on{background:var(--gold);border-color:var(--gold);color:#1a1405}}
+.pkg-tools select{width:auto;padding:9px 12px;border-radius:10px}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
+.pc{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;cursor:pointer;display:flex;flex-direction:column;transition:transform .25s ease,box-shadow .25s ease;animation:pcin .4s ease both;text-align:left;padding:0;color:inherit;font:inherit}
+.pc:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(0,0,0,.22)}
+.pc:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+@keyframes pcin{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.pc[hidden]{display:none}
+.pc .ph{position:relative;aspect-ratio:4/3;overflow:hidden;background:linear-gradient(135deg,#0e4a4f,#1f8f86)}
+.pc .ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+.pc:hover .ph img{transform:scale(1.08)}
+.pc .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(6,12,24,.7),transparent 55%)}
+.pc .dur{position:absolute;left:12px;top:12px;z-index:2;background:rgba(10,18,34,.75);color:#fff;font-size:.78rem;font-weight:700;padding:5px 11px;border-radius:999px;backdrop-filter:blur(6px)}
+.pc .tg{position:absolute;left:12px;bottom:12px;z-index:2;display:flex;gap:6px;flex-wrap:wrap}
+.pc .tg span{font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#fff;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.35);padding:3px 9px;border-radius:999px;backdrop-filter:blur(4px)}
+.pc .pb{padding:18px 18px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.pc h3{font-size:1.2rem;letter-spacing:-.02em}
+.pc .hl{color:var(--muted);font-size:.86rem;line-height:1.45;flex:1}
+.pc .pf2{display:flex;justify-content:space-between;align-items:flex-end;gap:10px;margin-top:6px;padding-top:12px;border-top:1px dashed var(--line)}
+.pc .pr small{display:block;color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;font-weight:600}
+.pc .pr b{font-size:1.45rem;letter-spacing:-.02em}
+.pc .pr i{font-style:normal;color:var(--muted);font-size:.8rem;font-weight:500}
+.pc .go{font-weight:700;font-size:.88rem;color:var(--text);display:flex;align-items:center;gap:6px}
+.pc .go span{transition:transform .2s}
+.pc:hover .go span{transform:translateX(5px)}
+.pkg-note{margin:26px 0 0;color:var(--muted);font-size:.84rem}
+.pkg-credits{margin-top:10px;font-size:.8rem;color:var(--muted)}
+.pkg-credits summary{cursor:pointer;font-weight:600}
+.pkg-credits ul{columns:2;column-gap:28px;padding-left:18px;margin:10px 0 0}
+.pkg-credits li{break-inside:avoid;margin-bottom:6px}
+.pkg-credits a{color:inherit}
+@media(max-width:640px){.pkg-credits ul{columns:1}}
+
+dialog.dlg{border:0;padding:0;background:transparent;color:var(--text);width:min(1060px,96vw);max-width:none;max-height:92vh;margin:auto;overflow:visible}
+dialog.dlg::backdrop{background:rgba(5,9,18,.7);backdrop-filter:blur(6px)}
+dialog.dlg[open]{animation:dlgin .3s ease}
+@keyframes dlgin{from{opacity:0;transform:translateY(24px) scale(.98)}to{opacity:1;transform:none}}
+.dlg-in{position:relative;background:var(--bg);border:1px solid var(--line);border-radius:24px;max-height:92vh;overflow:auto;overscroll-behavior:contain}
+.dlg-x{position:sticky;top:12px;float:right;margin:12px 12px -48px 0;z-index:6;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.4);background:rgba(10,18,34,.75);color:#fff;font-size:1.4rem;cursor:pointer;line-height:1}
+.dgrid{display:grid;grid-template-columns:5fr 6fr;gap:0}
+.dmedia{padding:0;position:sticky;top:0;align-self:start}
+.dmain{position:relative;aspect-ratio:4/3;overflow:hidden;border-radius:24px 0 0 0;background:#0e4a4f}
+.dmain img{width:100%;height:100%;object-fit:cover;display:block;animation:fadeimg .5s ease}
+@keyframes fadeimg{from{opacity:.2}to{opacity:1}}
+.dthumbs{display:flex;gap:8px;padding:10px 14px 0}
+.dthumbs button{flex:1;aspect-ratio:16/10;border:2px solid transparent;border-radius:10px;overflow:hidden;padding:0;cursor:pointer;opacity:.6;transition:.15s;background:none}
+.dthumbs button.on{border-color:var(--gold);opacity:1}
+.dthumbs img{width:100%;height:100%;object-fit:cover;display:block}
+.dcredit{padding:6px 16px 0;font-size:.7rem;color:var(--muted)}
+.dcredit a{color:inherit}
+.calc{margin:14px;padding:16px;border-radius:16px;background:var(--card);border:1px solid var(--line);display:grid;gap:12px}
+.calc .ppl{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.calc .ppl small{color:var(--muted);font-size:.78rem}
+.calc .ppl b{font-size:1.5rem;letter-spacing:-.02em}
+.crow{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:.9rem;font-weight:600}
+.step{display:flex;align-items:center;gap:6px}
+.step button{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:var(--bg);color:var(--text);font-size:1.1rem;cursor:pointer;line-height:1}
+.step button:hover{border-color:var(--gold)}
+.step output{min-width:30px;text-align:center;font-weight:700;font-size:1.05rem}
+.calc input[type=date]{width:auto;padding:8px 10px}
+.tot{display:flex;justify-content:space-between;align-items:baseline;padding-top:10px;border-top:1px dashed var(--line)}
+.tot b{font-size:1.6rem;letter-spacing:-.03em;color:var(--text)}
+.calc .btn{justify-content:center;width:100%}
+.dbody{padding:30px 30px 30px 24px}
+.dtags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.dtags span{font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);padding:3px 9px;border-radius:999px}
+.dbody h3{font-size:clamp(1.6rem,3vw,2.2rem);margin:0 0 8px}
+.dmeta{display:flex;flex-wrap:wrap;gap:8px 18px;color:var(--muted);font-size:.9rem;margin:0 0 20px}
+.dmeta b{color:var(--text)}
+.dbody h4{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:22px 0 12px}
+.tl{list-style:none;margin:0;padding:0 0 0 22px;position:relative}
+.tl::before{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--gold),var(--teal))}
+.tl li{position:relative;padding:0 0 18px 18px}
+.tl li::before{content:"";position:absolute;left:-22px;top:6px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--gold)}
+.tl .dy{font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.tl h5{margin:2px 0 6px;font-size:1.05rem}
+.tl ul{margin:0;padding-left:18px;color:var(--muted);font-size:.92rem}
+.tl li li{padding:0 0 3px;position:static}
+.tl li li::before{display:none}
+.inex{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.inex ul{list-style:none;margin:0;padding:0;display:grid;gap:7px;font-size:.9rem}
+.inex li{padding-left:24px;position:relative}
+.inex .y li::before{content:"✓";position:absolute;left:0;color:#22c55e;font-weight:800}
+.inex .n li::before{content:"–";position:absolute;left:4px;color:var(--muted);font-weight:800}
+.dwarn{margin-top:20px;font-size:.8rem;color:var(--muted);padding:12px 14px;border-radius:12px;background:var(--card);border:1px solid var(--line)}
+@media(max-width:820px){
+  .dgrid{grid-template-columns:1fr}
+  .dmedia{position:static}
+  .dmain{border-radius:24px 24px 0 0}
+  .dbody{padding:6px 20px 28px}
+  .inex{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion: reduce){.pc,dialog.dlg[open],.dmain img{animation:none}.pc .ph img{transition:none}}
 
 .steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;counter-reset:s}
 .steps li{counter-increment:s;padding:26px 0 0;border-top:2px solid var(--text)}
@@ -514,20 +605,49 @@ footer b{color:#fff}
   <div class="wrap"><div class="tabs2 rev" id="tabs2" role="tablist" aria-label="Choose a service"></div></div>
 </section>
 
-<section class="pk" id="packages"><div class="wrap grid">
-  <div class="rev">
-    <div class="eyebrow">Wayanad packages</div>
-    <h2>Planned locally, priced fairly.</h2>
-    <p>We work with resorts, villas, drivers and restaurants we know in Vythiri and around Wayanad, so your trip is arranged by people on the ground.</p>
-    <a class="btn btn-wa" data-wa="Hi E2E, please plan a Wayanad package for me." href="#">Plan my trip</a>
+<section class="pkg-sec" id="packages"><div class="wrap">
+  <div class="pkg-head rev">
+    <div class="head" style="margin:0">
+      <div class="eyebrow dk">Wayanad packages</div>
+      <h2>Pick a trip. We handle the rest.</h2>
+    </div>
+    <span class="demo-pill">Demo &middot; sample packages and prices</span>
   </div>
-  <div class="tiles rev">
-    <div class="tile"><span>01</span><h3>Stay</h3><p>Resorts, hotels, private pool villas and homestays.</p></div>
-    <div class="tile"><span>02</span><h3>Pickup</h3><p>Airport, railway station and bus stand pickup with local drivers.</p></div>
-    <div class="tile"><span>03</span><h3>Food</h3><p>Meals and restaurant arrangements to suit your group.</p></div>
-    <div class="tile"><span>04</span><h3>Experiences</h3><p>Sightseeing and activities across Wayanad.</p></div>
+  <div class="pkg-tools rev">
+    <div class="pf" id="pf" role="group" aria-label="Filter packages"></div>
+    <select id="psort" aria-label="Sort packages"><option value="rec">Recommended</option><option value="lo">Price: low to high</option><option value="hi">Price: high to low</option></select>
   </div>
+  <div class="pgrid" id="pgrid"></div>
+  <p class="pkg-note">Prices are per person on twin sharing, shown for demo only. Final quotes depend on dates, hotel and group size. Peak season (December, April and May) may cost more. Entry tickets and activities are extra unless stated.</p>
+  <details class="pkg-credits" id="pcred"><summary>Photo credits</summary><ul id="pcredList"></ul></details>
 </div></section>
+
+<dialog class="dlg" id="pdlg" aria-labelledby="dTitle"><div class="dlg-in">
+  <button class="dlg-x" type="button" id="dclose" aria-label="Close">&times;</button>
+  <div class="dgrid">
+    <div class="dmedia">
+      <div class="dmain"><img id="dImg" alt=""></div>
+      <div class="dthumbs" id="dThumbs"></div>
+      <div class="dcredit" id="dCredit"></div>
+      <div class="calc">
+        <div class="ppl"><small>From, per person (twin sharing)</small><b id="dPrice"></b></div>
+        <div class="crow"><span>Travellers</span><div class="step"><button type="button" id="dMinus" aria-label="Fewer travellers">&minus;</button><output id="dN">2</output><button type="button" id="dPlus" aria-label="More travellers">+</button></div></div>
+        <div class="crow"><label for="dDate" style="display:block;font-weight:600">Travel date</label><input type="date" id="dDate"></div>
+        <div class="tot"><small style="color:var(--muted)" id="dCalc"></small><b id="dTotal"></b></div>
+        <a class="btn btn-wa" href="#" id="dWa" data-wa="">Book on WhatsApp</a>
+      </div>
+    </div>
+    <div class="dbody">
+      <div class="dtags" id="dTags"></div>
+      <h3 id="dTitle"></h3>
+      <p class="dmeta" id="dMeta"></p>
+      <h4>Itinerary</h4>
+      <ol class="tl" id="dTl"></ol>
+      <div class="inex"><div><h4>Included</h4><ul class="y" id="dInc"></ul></div><div><h4>Not included</h4><ul class="n" id="dExc"></ul></div></div>
+      <p class="dwarn">Sample itinerary for demo. Attraction timings, entry rules, safari slots and trek permits depend on local authorities and weather, and some places can be closed at times. We confirm the final plan when you book.</p>
+    </div>
+  </div>
+</div></dialog>
 
 <section id="process"><div class="wrap">
   <div class="head rev">
@@ -648,6 +768,149 @@ SERVICE_NAMES.forEach(n=>sel.add(new Option(n,n)));
   addEventListener("resize",()=>track.scrollTo({left:target(Math.max(cur,0))}));
   setActive(0);
 })();
+
+/* ---------- packages (demo data) ---------- */
+const INC_STD=["Daily breakfast","Private AC cab for sightseeing","Driver allowance, fuel, tolls and parking","Welcome drink on arrival"];
+const EXC_STD=["Entry tickets and activity fees","Lunch and dinner unless stated","Flights, train or bus tickets","Personal expenses, tips and insurance"];
+const PACKAGES=[
+ {id:"quick",name:"Wayanad Quick Escape",n:2,d:3,tags:["budget","couples"],price:7499,stay:"3-star resort, Vythiri",best:"Couples and friends",photos:["pookode","lakkidi","banasura"],
+  hl:["Pookode Lake","Lakkidi View Point","Banasura Sagar Dam"],
+  inc:["2 nights in a 3-star resort",...INC_STD],exc:EXC_STD,
+  days:[["Arrive and Pookode Lake",["Pickup from Kalpetta or Kozhikode","Check in and freshen up","Pookode Lake boating and lakeside walk"]],
+        ["Lakkidi and Banasura",["Lakkidi View Point, the misty gateway to Wayanad","Banasura Sagar Dam and boating","Evening spice shopping in Kalpetta"]],
+        ["Departure",["Breakfast and checkout","Drop at Kalpetta or Kozhikode"]]]},
+ {id:"family",name:"Wayanad Family Holiday",n:3,d:4,tags:["family"],price:12999,stay:"3-star family resort",best:"Families with kids",photos:["kuruva","edakkal","pookode"],
+  hl:["Edakkal Caves","Jain Temple","Kuruva Island","Pookode Lake"],
+  inc:["3 nights in a family room",...INC_STD,"Kids under 5 stay free on existing bedding"],exc:EXC_STD,
+  days:[["Arrival and Pookode Lake",["Pickup and check in","Pookode Lake pedal boating","Evening at leisure by the resort"]],
+        ["Edakkal and Sulthan Bathery",["Edakkal Caves, ancient rock carvings, short climb with steps","Jain Temple at Sulthan Bathery","Return for a relaxed evening"]],
+        ["Kuruva Island",["Kuruva Island, a river island of dense forest","Picnic lunch by the stream","Local market stop"]],
+        ["Departure",["Breakfast and checkout","Drop via Lakkidi viewpoint"]]]},
+ {id:"honeymoon",name:"Honeymoon Pool Villa",n:3,d:4,tags:["couples","luxury"],price:26999,stay:"Private pool villa, Vythiri",best:"Honeymooners",photos:["hills","vythiri-resort","tea"],pop:1,
+  hl:["Private pool villa","Candlelight dinner","Tea estate walk"],
+  inc:["3 nights in a private pool villa","Breakfast and dinner daily","Candlelight dinner set-up on one evening","Flower bed decoration on arrival","Private AC cab for sightseeing","Driver allowance, fuel, tolls and parking"],
+  exc:["Entry tickets and activity fees","Spa treatments","Flights, train or bus tickets","Personal expenses and tips"],
+  days:[["Arrive in style",["Private pickup","Welcome drink, villa check in","Candlelight dinner by the pool"]],
+        ["Tea gardens and viewpoints",["Walk through tea gardens near Vythiri","Lakkidi View Point at golden hour","Slow evening at the villa"]],
+        ["Banasura and spa day",["Banasura Sagar Dam and boating","Optional couple spa session in the afternoon"]],
+        ["Departure",["Late breakfast and checkout","Private drop"]]]},
+ {id:"tea",name:"Tea Estate Retreat",n:2,d:3,tags:["couples"],price:10999,stay:"Resort among tea gardens",best:"Couples and slow travellers",photos:["tea","hills","lakkidi"],
+  hl:["Tea garden walk","Spice plantation visit","Lakkidi sunset"],
+  inc:["2 nights in a garden-view room","Breakfast and dinner daily",...INC_STD.slice(1)],exc:EXC_STD.slice(0,1).concat(["Lunch","Flights, train or bus tickets","Personal expenses and tips"]),
+  days:[["Arrive and garden walk",["Pickup and check in","Guided walk through tea gardens","Evening tea and sunset"]],
+        ["Estate and spice trail",["Tea estate and factory visit, subject to access","Spice and coffee plantation walk","Lakkidi View Point"]],
+        ["Departure",["Breakfast and checkout","Drop at Kalpetta or Kozhikode"]]]},
+ {id:"wildlife",name:"Wildlife and Wilderness Trail",n:3,d:4,tags:["adventure","family"],price:14999,stay:"Forest-edge resort, Sulthan Bathery",best:"Nature lovers",photos:["peacock","muthanga","kuruva"],
+  hl:["Tholpetty safari","Muthanga Sanctuary","Kuruva Island"],
+  inc:["3 nights in a forest-edge resort",...INC_STD],exc:["Jeep safari tickets and forest entry fees","Lunch and dinner unless stated","Flights, train or bus tickets","Personal expenses and tips"],
+  days:[["Arrival at Sulthan Bathery",["Pickup and check in","Evening nature walk around the resort"]],
+        ["Tholpetty and Thirunelli",["Morning safari at Tholpetty Wildlife Sanctuary","Thirunelli Temple in the forest valley"]],
+        ["Muthanga and Kuruva Island",["Safari at Muthanga Wildlife Sanctuary","Kuruva Island in the afternoon"]],
+        ["Departure",["Breakfast and checkout","Edakkal Caves stop on the way, if time allows"]]]},
+ {id:"trek",name:"Trekker's Trail",n:3,d:4,tags:["adventure","budget"],price:11499,stay:"Homestay or resort, Meppadi",best:"Friends and adventure seekers",photos:["chembra","meenmutty","soochipara"],
+  hl:["Chembra Peak","Meenmutty Falls","Edakkal climb"],
+  inc:["3 nights in a homestay or resort",...INC_STD,"Local trek guide on trek days"],exc:["Forest permits and entry fees","Lunch and dinner unless stated","Flights, train or bus tickets","Personal expenses and tips"],
+  days:[["Arrive at Meppadi",["Pickup and check in","Briefing and early night"]],
+        ["Meenmutty Falls trek",["Forest trek to Meenmutty Falls","Rest and local lunch","Evening at the resort"]],
+        ["Chembra Peak trek",["Trek towards the heart-shaped lake, permit and season dependent","Descent and tea break","Early dinner"]],
+        ["Edakkal and departure",["Edakkal Caves climb","Drop at Kalpetta or Kozhikode"]]]},
+ {id:"treehouse",name:"Treehouse Stay Experience",n:2,d:3,tags:["couples","luxury"],price:15999,stay:"Treehouse, plantation resort",best:"Couples and friends",photos:["treehouse","hills","soochipara"],
+  hl:["Treehouse stay","Campfire evening","Waterfall visit"],
+  inc:["2 nights in a treehouse","Breakfast and dinner daily","Campfire evening, weather permitting",...INC_STD.slice(1)],exc:EXC_STD.slice(0,1).concat(["Lunch","Flights, train or bus tickets","Personal expenses and tips"]),
+  days:[["Into the trees",["Pickup and treehouse check in","Plantation walk","Campfire dinner"]],
+        ["Waterfalls and viewpoints",["Waterfall visit, subject to access","Banasura Sagar Dam","Return for a quiet evening"]],
+        ["Departure",["Breakfast and checkout","Drop at Kalpetta or Kozhikode"]]]},
+ {id:"heritage",name:"Heritage and Spiritual Trail",n:2,d:3,tags:["family","budget"],price:8999,stay:"3-star hotel, Sulthan Bathery",best:"Families and seniors",photos:["thirunelli","jain","edakkal"],
+  hl:["Thirunelli Temple","Jain Temple","Edakkal Caves"],
+  inc:["2 nights in a 3-star hotel",...INC_STD],exc:EXC_STD,
+  days:[["Sulthan Bathery heritage",["Pickup and check in","Jain Temple, old stone architecture","Edakkal Caves, ancient rock carvings"]],
+        ["Thirunelli and forest valley",["Thirunelli Temple and the sacred stream","Kuruva Island or village visit if time allows"]],
+        ["Departure",["Breakfast and checkout","Drop at Kalpetta or Kozhikode"]]]},
+ {id:"luxury",name:"Luxury Resort Retreat",n:4,d:5,tags:["luxury","couples","family"],price:34999,stay:"5-star resort, Vythiri",best:"Special occasions",photos:["resort","vythiri-resort","sadya"],pop:1,
+  hl:["5-star resort","Spa session","Kerala sadya lunch"],
+  inc:["4 nights in a premium room","Breakfast and dinner daily","One Ayurvedic spa session per person","Traditional Kerala sadya lunch on one day","Private AC cab and driver for the whole trip","Airport or station pickup and drop"],
+  exc:["Entry tickets and activity fees","Additional spa treatments","Flights, train or bus tickets","Personal expenses and tips"],
+  days:[["Arrive and unwind",["Airport or station pickup","Check in, welcome ritual","Evening at the resort"]],
+        ["Resort day and lake",["Spa session","Pookode Lake in the afternoon"]],
+        ["Banasura and sadya",["Banasura Sagar Dam and boating","Kerala sadya lunch"]],
+        ["Heritage day",["Edakkal Caves and Jain Temple","Sunset at Lakkidi"]],
+        ["Departure",["Breakfast and checkout","Private drop"]]]},
+ {id:"group",name:"Group Getaway, 10 or more",n:2,d:3,tags:["group","budget"],price:6499,stay:"3-star hotel, triple sharing",best:"Friends, colleges and offices",photos:["banasura","lakkidi","tea"],
+  hl:["Banasura Sagar Dam","Lakkidi View Point","Group-friendly stay"],min:10,
+  inc:["2 nights, triple sharing","Daily breakfast","Tempo traveller or bus for the group","Driver allowance, fuel, tolls and parking"],exc:EXC_STD,
+  days:[["Arrive and Pookode",["Group pickup and check in","Pookode Lake","Evening games and free time"]],
+        ["Banasura and Lakkidi",["Banasura Sagar Dam","Lakkidi View Point","Group photo stop at tea gardens"]],
+        ["Departure",["Breakfast and checkout","Group drop"]]]}
+];
+const fmtINR=n=>"₹"+Number(n).toLocaleString("en-IN");
+let CREDITS={};
+const pgrid=document.getElementById("pgrid"),pf=document.getElementById("pf"),psort=document.getElementById("psort");
+const FILTERS=[["all","All"],["couples","Couples"],["family","Family"],["adventure","Adventure"],["luxury","Luxury"],["budget","Budget"],["group","Group"]];
+let fcur="all";
+FILTERS.forEach(([k,l])=>{const b=document.createElement("button");b.type="button";b.textContent=l;b.dataset.k=k;if(k==="all")b.className="on";pf.appendChild(b)});
+function esc(t){return String(t).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
+function renderCards(){
+  const list=PACKAGES.filter(p=>fcur==="all"||p.tags.includes(fcur));
+  const s=psort.value;
+  if(s==="lo")list.sort((a,b)=>a.price-b.price);else if(s==="hi")list.sort((a,b)=>b.price-a.price);
+  pgrid.innerHTML="";
+  list.forEach((p,i)=>{
+    const c=document.createElement("button");c.type="button";c.className="pc";c.dataset.id=p.id;c.style.animationDelay=(i*50)+"ms";
+    c.innerHTML='<div class="ph"><img src="img/'+p.photos[0]+'.jpg" alt="" loading="lazy"><span class="dur">'+p.n+'N / '+p.d+'D</span><div class="tg">'+p.tags.slice(0,2).map(t=>'<span>'+esc(t)+'</span>').join('')+'</div></div>'
+      +'<div class="pb"><h3>'+esc(p.name)+'</h3><div class="hl">'+p.hl.map(esc).join(" &middot; ")+'</div>'
+      +'<div class="pf2"><div class="pr"><small>From</small><b>'+fmtINR(p.price)+'</b> <i>/ person</i></div><span class="go">View plan <span>&rarr;</span></span></div></div>';
+    pgrid.appendChild(c);
+  });
+}
+pf.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;fcur=b.dataset.k;pf.querySelectorAll("button").forEach(x=>x.classList.toggle("on",x===b));renderCards()});
+psort.addEventListener("change",renderCards);
+pgrid.addEventListener("click",e=>{const c=e.target.closest(".pc");if(c)openPkg(c.dataset.id)});
+
+const dlg=document.getElementById("pdlg"),dImg=document.getElementById("dImg"),dThumbs=document.getElementById("dThumbs"),dCredit=document.getElementById("dCredit");
+const dN=document.getElementById("dN"),dDate=document.getElementById("dDate"),dWa=document.getElementById("dWa");
+let cp=null,cn=2;
+function creditHtml(slug){const c=CREDITS[slug];if(!c)return"";return 'Photo: '+esc(c.author)+', <a href="'+esc(c.source)+'" target="_blank" rel="noopener">'+esc(c.license)+'</a>'}
+function showPhoto(slug){dImg.src="img/"+slug+".jpg";dCredit.innerHTML=creditHtml(slug);dThumbs.querySelectorAll("button").forEach(b=>b.classList.toggle("on",b.dataset.s===slug))}
+function calc(){
+  const tot=cp.price*cn;
+  document.getElementById("dTotal").textContent=fmtINR(tot);
+  document.getElementById("dCalc").textContent=fmtINR(cp.price)+" x "+cn+" traveller"+(cn>1?"s":"");
+  dN.textContent=cn;
+  const dt=dDate.value?(" on "+dDate.value):"";
+  dWa.dataset.wa="Hi E2E, I am interested in the \""+cp.name+"\" package ("+cp.n+"N/"+cp.d+"D) for "+cn+" traveller"+(cn>1?"s":"")+dt+". Estimated "+fmtINR(tot)+". Please share availability."
+}
+function openPkg(id,noHash){
+  cp=PACKAGES.find(p=>p.id===id);if(!cp)return;
+  cn=cp.min||2;
+  document.getElementById("dTitle").textContent=cp.name;
+  document.getElementById("dTags").innerHTML=cp.tags.map(t=>'<span>'+esc(t)+'</span>').join("");
+  document.getElementById("dMeta").innerHTML='<span><b>'+cp.n+' nights / '+cp.d+' days</b></span><span>Stay: <b>'+esc(cp.stay)+'</b></span><span>Best for: <b>'+esc(cp.best)+'</b></span>'+(cp.min?'<span>Minimum <b>'+cp.min+'</b> travellers</span>':'');
+  document.getElementById("dPrice").textContent=fmtINR(cp.price);
+  dThumbs.innerHTML=cp.photos.map(s=>'<button type="button" data-s="'+s+'" aria-label="Photo"><img src="img/'+s+'.jpg" alt="" loading="lazy"></button>').join("");
+  showPhoto(cp.photos[0]);
+  document.getElementById("dTl").innerHTML=cp.days.map(([t,items],i)=>'<li><div class="dy">Day '+(i+1)+'</div><h5>'+esc(t)+'</h5><ul>'+items.map(x=>'<li>'+esc(x)+'</li>').join("")+'</ul></li>').join("");
+  document.getElementById("dInc").innerHTML=cp.inc.map(x=>'<li>'+esc(x)+'</li>').join("");
+  document.getElementById("dExc").innerHTML=cp.exc.map(x=>'<li>'+esc(x)+'</li>').join("");
+  dDate.min=new Date().toISOString().slice(0,10);dDate.value="";
+  calc();
+  if(!dlg.open)dlg.showModal();
+  dlg.querySelector(".dlg-in").scrollTop=0;
+  if(!noHash)try{history.replaceState(null,"","#pkg-"+id)}catch(e){}
+}
+dThumbs.addEventListener("click",e=>{const b=e.target.closest("button");if(b)showPhoto(b.dataset.s)});
+document.getElementById("dMinus").addEventListener("click",()=>{cn=Math.max(cp.min||1,cn-1);calc()});
+document.getElementById("dPlus").addEventListener("click",()=>{cn=Math.min(40,cn+1);calc()});
+dDate.addEventListener("change",calc);
+document.getElementById("dclose").addEventListener("click",()=>dlg.close());
+dlg.addEventListener("click",e=>{if(e.target===dlg)dlg.close()});
+dlg.addEventListener("close",()=>{try{if(location.hash.startsWith("#pkg-"))history.replaceState(null,"",location.pathname+location.search+"#packages")}catch(e){}});
+renderCards();
+fetch("img/credits.json").then(r=>r.json()).then(c=>{
+  CREDITS=c;
+  document.getElementById("pcredList").innerHTML=Object.values(c).map(x=>'<li>'+esc(x.title)+' by '+esc(x.author)+', <a href="'+esc(x.source)+'" target="_blank" rel="noopener">'+esc(x.license)+'</a></li>').join("");
+  if(cp&&dlg.open)dCredit.innerHTML=creditHtml(dThumbs.querySelector("button.on")?.dataset.s||cp.photos[0]);
+}).catch(()=>{});
+if(location.hash.startsWith("#pkg-"))openPkg(location.hash.slice(5),true);
 
 /* partner logos: official SVGs go in site/logos/, text name shows until a file exists */
 const PARTNERS=[
