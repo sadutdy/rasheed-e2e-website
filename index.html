@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>E2E Travel Solutions, Vythiri, Wayanad</title>
+<meta name="description" content="Travel tickets, Wayanad stays and packages, visa, forex and document services from one desk in Vythiri, Wayanad. Message us on WhatsApp.">
+<meta name="theme-color" content="#0a1222">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"TravelAgency","name":"E2E Travel Solutions","description":"Travel bookings, Wayanad stays and packages, visa, forex and document services.","telephone":["+919605841666","+919605841667"],"address":{"@type":"PostalAddress","addressLocality":"Vythiri","addressRegion":"Kerala","addressCountry":"IN"},"areaServed":"Wayanad"}
+</script>
+<style>
+:root{
+  --ink:#0a1222; --ink2:#111b32; --gold:#e8b04b; --teal:#34d1bf; --wa:#1faa59;
+  --bg:#f6f4ef; --card:#ffffff; --text:#111a2c; --muted:#596277; --line:#e1ddd2;
+}
+@media (prefers-color-scheme: dark){
+  :root{--bg:#0b1220; --card:#111a2d; --text:#eef1f7; --muted:#9aa4b8; --line:#1f2b45}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.eyebrow{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--gold)}
+h1,h2,h3{letter-spacing:-.025em;line-height:1.08;margin:0}
+.btn{display:inline-flex;align-items:center;gap:10px;border:0;border-radius:10px;padding:14px 22px;font:inherit;font-weight:600;text-decoration:none;cursor:pointer;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-line{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.35)}
+.btn-sm{padding:9px 16px;font-size:.9rem}
+
+/* nav */
+header{position:fixed;inset:0 0 auto 0;z-index:20;background:rgba(10,18,34,.62);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08);color:#fff}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-weight:700;letter-spacing:-.02em;font-size:1.1rem;display:flex;align-items:baseline;gap:8px}
+.brand i{font-style:normal;color:var(--gold);font-weight:800}
+.brand small{font-weight:500;opacity:.65;font-size:.8rem}
+.links{display:flex;gap:26px;align-items:center}
+.links a{text-decoration:none;font-size:.92rem;opacity:.8}
+.links a:hover{opacity:1}
+@media(max-width:760px){.links a.l{display:none}.brand small{display:none}}
+
+/* hero */
+.hero{position:relative;min-height:84vh;min-height:84svh;background:radial-gradient(60% 70% at 85% 15%,rgba(232,176,75,.22) 0,transparent 60%),radial-gradient(70% 80% at 90% 90%,rgba(52,209,191,.16) 0,transparent 60%),linear-gradient(160deg,#0d1830,var(--ink) 70%);color:#fff;display:flex;align-items:center;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:radial-gradient(70% 80% at 80% 40%,#000,transparent);mask-image:radial-gradient(70% 80% at 80% 40%,#000,transparent)}
+.hero-art{position:absolute;right:0;top:50%;transform:translateY(-50%);width:min(640px,58vw);opacity:.9;pointer-events:none}
+@media(max-width:760px),(max-aspect-ratio:1/1){.hero{min-height:auto}.hero .wrap{padding-bottom:230px}.hero-art{top:auto;bottom:0;transform:none;width:min(620px,110%);right:-5%;opacity:.55}}
+.hero .wrap{position:relative;z-index:2;padding-top:96px;padding-bottom:96px}
+.hero h1{font-size:clamp(2.4rem,6.4vw,4.6rem);font-weight:700;max-width:11.5em;margin:16px 0 18px}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p.lead{max-width:30em;font-size:1.1rem;color:#c3cde0;margin:0 0 30px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.facts{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);max-width:560px;font-size:.88rem;color:#aebad1}
+.facts b{display:block;color:#fff;font-size:.95rem;font-weight:600}
+@media(max-width:760px),(max-aspect-ratio:1/1){
+  .hero{align-items:flex-start}
+  .hero::after{background:linear-gradient(180deg,rgba(10,18,34,.9) 0,rgba(10,18,34,.55) 55%,transparent 80%),linear-gradient(0deg,var(--ink) 0,transparent 18%)}
+  .hero .wrap{padding-top:92px}
+}
+
+/* partners */
+.partners{padding:44px 0 48px;border-bottom:1px solid var(--line)}
+.partners .cap{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.partners .cap span{color:var(--muted);font-size:.9rem}
+.logos{margin-top:14px;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.marq{overflow:hidden;padding:8px 0 4px}
+.mq-track{display:flex;width:max-content;animation:mq 36s linear infinite}
+.marq.back .mq-track{animation-direction:reverse;animation-duration:44s}
+.marq:hover .mq-track{animation-play-state:paused}
+.mq-track .logo{flex:0 0 172px;margin-right:12px;transition:transform .25s ease,box-shadow .25s ease}
+.mq-track .logo:hover{transform:translateY(-5px) scale(1.05);box-shadow:0 14px 30px rgba(0,0,0,.35);z-index:2}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion: reduce){
+  .logos{-webkit-mask-image:none;mask-image:none}
+  .mq-track{animation:none;width:auto;flex-wrap:wrap;gap:12px}
+  .mq-track .logo{margin-right:0}
+  .mq-track [aria-hidden=true],.marq.back{display:none}
+}
+.logo{height:80px;background:#fff;border:1px solid var(--line);border-radius:12px;display:grid;place-items:center;padding:12px 18px}
+.logo img{max-width:100%;max-height:46px;object-fit:contain;display:block}
+.logo{overflow:hidden}
+.logo.dk{background:#12306b;border-color:#12306b}
+.logo.dk .wm{color:#fff}
+.logo img.sq{transform:scale(2.3)}
+.logo .wm{display:none;font-weight:700;color:#1b2540;font-size:.95rem;text-align:center;letter-spacing:-.01em}
+.logo.nofile img{display:none}
+.logo.nofile .wm{display:block}
+
+/* sections */
+section{padding:84px 0}
+.head{max-width:620px;margin-bottom:40px}
+.head h2{font-size:clamp(1.8rem,4vw,2.6rem);margin:10px 0 12px}
+.head p{color:var(--muted);margin:0}
+.eyebrow.dk{color:#a77616}
+@media (prefers-color-scheme: dark){.eyebrow.dk{color:var(--gold)}}
+
+/* service carousel */
+:root{--sw:min(1000px,88vw)}
+.svcs{padding:84px 0 56px;overflow:hidden}
+.car{position:relative;margin-top:6px}
+.track{position:relative;display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding:18px calc((100% - var(--sw))/2) 30px;scrollbar-width:none;-webkit-overflow-scrolling:touch;outline:none}
+.track::-webkit-scrollbar{display:none}
+.slide{flex:0 0 var(--sw);height:clamp(430px,50vw,500px);scroll-snap-align:center;border-radius:28px;position:relative;overflow:hidden;color:#fff;display:grid;grid-template-columns:5fr 6fr;transform:scale(.93);opacity:.5;transition:transform .5s ease,opacity .5s ease,box-shadow .5s;cursor:pointer;box-shadow:0 0 0 rgba(0,0,0,0)}
+.slide.on{transform:none;opacity:1;cursor:default;box-shadow:0 24px 60px rgba(8,14,30,.35)}
+.s1{background:linear-gradient(135deg,#0b3a73,#2b7de9 60%,#7cc4ff)}
+.s2{background:linear-gradient(135deg,#1f1b4d,#7a2e6e 55%,#f08a4b)}
+.s3{background:linear-gradient(135deg,#064e3b,#0f9d8a 60%,#7ee0c3)}
+.s4{background:linear-gradient(135deg,#2a0f4f,#b4388f 55%,#ff9a62)}
+.s5{background:linear-gradient(135deg,#0b3d2e,#1f8f63 60%,#9be28a)}
+.s6{background:linear-gradient(135deg,#0a1a4a,#1d4ed8 60%,#5aa7ff)}
+.s7{background:linear-gradient(135deg,#2a1065,#6d3adb 55%,#e0a93b)}
+.s8{background:linear-gradient(135deg,#10233a,#0e7c86 60%,#5fd0c4)}
+.slide .txt{position:relative;z-index:2;padding:40px 8px 40px 46px;display:flex;flex-direction:column;justify-content:center;gap:14px}
+.slide .num{font-size:.8rem;letter-spacing:.22em;font-weight:700;opacity:.75}
+.slide h3{font-size:clamp(2.1rem,4.6vw,3.3rem);letter-spacing:-.03em;line-height:1.02}
+.slide .txt p{margin:0;font-size:1.2rem;opacity:.95}
+.sub-chips{display:flex;flex-wrap:wrap;gap:8px;margin:2px 0 8px}
+.sub-chips a{text-decoration:none;font-size:.85rem;font-weight:600;padding:7px 13px;border-radius:999px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);transition:background .15s}
+.sub-chips a:hover{background:rgba(255,255,255,.32)}
+.slide .btn{align-self:flex-start}
+.art{position:relative;min-height:0}
+.art svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.art svg *{transform-box:fill-box;transform-origin:center}
+.cnav{position:absolute;top:50%;z-index:5;width:48px;height:48px;margin-top:-34px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:rgba(10,18,34,.72);color:#fff;font-size:1.5rem;line-height:1;cursor:pointer;backdrop-filter:blur(6px);display:grid;place-items:center}
+.cnav:hover{background:rgba(10,18,34,.92)}
+.cnav.prev{left:max(12px,calc((100% - var(--sw))/2 - 24px))}
+.cnav.next{right:max(12px,calc((100% - var(--sw))/2 - 24px))}
+.tabs2{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:2px}
+.tb{font:inherit;font-size:.85rem;font-weight:600;padding:9px 15px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--muted);cursor:pointer;position:relative;overflow:hidden;transition:.15s}
+.tb:hover{color:var(--text)}
+.tb.on{color:var(--text);border-color:var(--gold)}
+.tb i{position:absolute;left:0;bottom:0;height:3px;width:0;background:var(--gold)}
+.tb.on i{animation:fillbar 7s linear forwards}
+.hold .tb.on i{animation-play-state:paused}
+@keyframes fillbar{to{width:100%}}
+@media(max-width:760px){
+  .slide{grid-template-columns:1fr;grid-template-rows:250px auto;height:auto;border-radius:22px}
+  .slide .art{order:-1}
+  .slide .txt{padding:6px 22px 26px}
+  .cnav{display:none}
+}
+
+/* art animations */
+.slide:not(.on) .art *{animation-play-state:paused}
+.art .a-drift{animation:drift 30s linear infinite}
+.art .a-scroll{animation:scrollL 20s linear infinite}
+.art .a-dash{animation:dashmove 1.6s linear infinite}
+.art .a-dashf{animation:dashf .5s linear infinite}
+.art .a-bob{animation:bob .6s ease-in-out infinite}
+.art .a-float{animation:floaty 5s ease-in-out infinite}
+.art .a-float2{animation:floaty 6s ease-in-out -2s infinite}
+.art .a-float3{animation:floaty 7s ease-in-out -4s infinite}
+.art .a-spin{animation:spin .9s linear infinite}
+.art .a-spin-slow{animation:spin 8s linear infinite}
+.art .a-pulse{animation:pulse 2.4s ease-out infinite}
+.art .a-sway{animation:sway 4.5s ease-in-out infinite}
+.art .a-twinkle{animation:twinkle 3s ease-in-out infinite}
+.art .a-wave{animation:waveL 3s linear infinite}
+.art .a-tilt{animation:tilt 6s ease-in-out infinite}
+.art .a-streak{animation:streak 2.4s linear infinite}
+.art .a-flick{animation:flick 3s ease-in-out infinite}
+.art .a-puff{animation:puff 1.6s ease-out infinite}
+.art .a-pop{animation:popin 4.5s ease-out infinite}
+.art .a-slam{animation:slam 6s ease-in infinite}
+.art .a-stamp{animation:stampk 6s ease-out infinite}
+.art .a-sign{stroke-dasharray:220;animation:sign 4.5s ease-in-out infinite}
+.art .a-fall{animation:fall 1s linear infinite}
+@keyframes drift{from{transform:translateX(-140px)}to{transform:translateX(740px)}}
+@keyframes scrollL{to{transform:translateX(-600px)}}
+@keyframes dashmove{to{stroke-dashoffset:-26}}
+@keyframes dashf{to{stroke-dashoffset:var(--p,28)}}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes pulse{0%{transform:scale(.5);opacity:.9}100%{transform:scale(2.4);opacity:0}}
+@keyframes sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+@keyframes twinkle{0%,100%{opacity:.15}50%{opacity:1}}
+@keyframes waveL{to{transform:translateX(-80px)}}
+@keyframes tilt{0%,100%{transform:rotate(-5deg)}50%{transform:rotate(5deg)}}
+@keyframes streak{0%{transform:translateX(60px);opacity:0}20%{opacity:1}100%{transform:translateX(-160px);opacity:0}}
+@keyframes flick{0%,100%{opacity:.3}50%{opacity:.75}}
+@keyframes puff{0%{transform:translateX(0) scale(.4);opacity:.7}100%{transform:translateX(-70px) scale(1.6);opacity:0}}
+@keyframes popin{0%{transform:scale(0);opacity:0}12%{transform:scale(1.25);opacity:1}22%{transform:scale(1)}85%{opacity:1}100%{opacity:0;transform:scale(1)}}
+@keyframes slam{0%,50%{opacity:0;transform:translateY(-50px) scale(1.7)}58%{opacity:1;transform:translateY(0) scale(1)}62%{transform:scale(.92)}66%{transform:scale(1)}90%{opacity:1}100%{opacity:0}}
+@keyframes stampk{0%{opacity:0;transform:scale(2.4)}10%{opacity:1;transform:scale(1)}14%{transform:scale(1.08)}18%{transform:scale(1)}80%{opacity:1}100%{opacity:0}}
+@keyframes sign{0%{stroke-dashoffset:220}50%,85%{stroke-dashoffset:0}100%{stroke-dashoffset:220}}
+@keyframes fall{to{stroke-dashoffset:-44}}
+@media (prefers-reduced-motion: reduce){
+  .art *{animation:none!important}
+  .slide{transition:none}
+  .tb.on i{animation:none;width:100%}
+}
+
+.pk{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.pk .grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.pk h2{font-size:clamp(1.8rem,4vw,2.7rem);margin:10px 0 16px}
+.pk p{color:#b4bfd4;margin:0 0 28px;max-width:30em}
+.tiles{display:grid;grid-template-columns:1fr 1fr;border:1px solid rgba(255,255,255,.14);border-radius:14px;overflow:hidden}
+.tile{padding:24px 22px;border:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.02)}
+.tile span{color:var(--teal);font-size:.75rem;letter-spacing:.14em;font-weight:600}
+.tile h3{font-size:1.1rem;margin:8px 0 6px}
+.tile p{margin:0;font-size:.88rem;color:#9fabc3}
+@media(max-width:860px){.pk .grid{grid-template-columns:1fr;gap:32px}}
+@media(max-width:480px){.tiles{grid-template-columns:1fr}}
+
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;counter-reset:s}
+.steps li{counter-increment:s;padding:26px 0 0;border-top:2px solid var(--text)}
+.steps li::before{content:"0" counter(s);display:block;font-size:2.4rem;font-weight:700;letter-spacing:-.03em;color:var(--gold);margin-bottom:8px}
+.steps h3{font-size:1.15rem;margin-bottom:6px}
+.steps p{margin:0;color:var(--muted);font-size:.95rem}
+
+.contact{background:var(--card);border-top:1px solid var(--line)}
+.cgrid{display:grid;grid-template-columns:5fr 6fr;gap:56px}
+@media(max-width:860px){.cgrid{grid-template-columns:1fr;gap:32px}}
+.cinfo h2{font-size:clamp(1.8rem,4vw,2.5rem);margin:10px 0 14px}
+.cinfo p{color:var(--muted);margin:0 0 24px}
+.cinfo dl{margin:0;display:grid;gap:16px}
+.cinfo dt{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.cinfo dd{margin:2px 0 0;font-size:1.1rem;font-weight:600}
+.cinfo dd a{text-decoration:none}
+form{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+form .full{grid-column:1/-1}
+label{display:grid;gap:6px;font-weight:600;font-size:.85rem}
+input,select,textarea{font:inherit;font-weight:400;padding:12px 14px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--text);width:100%}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:1px}
+textarea{min-height:96px;resize:vertical}
+.note{font-size:.8rem;color:var(--muted)}
+@media(max-width:520px){form{grid-template-columns:1fr}}
+
+footer{background:var(--ink);color:#93a0ba;padding:34px 0 100px;font-size:.88rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 40px;justify-content:space-between}
+footer b{color:#fff}
+.sticky{position:fixed;right:16px;bottom:16px;z-index:30;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+
+.js .rev{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.js .rev.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){.js .rev{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<header><div class="wrap nav">
+  <div class="brand"><i>e2e</i> Travel Solutions <small>Vythiri, Wayanad</small></div>
+  <nav class="links">
+    <a class="l" href="#services">Services</a>
+    <a class="l" href="#packages">Packages</a>
+    <a class="l" href="#process">How it works</a>
+    <a class="l" href="#contact">Contact</a>
+    <a class="btn btn-wa btn-sm" data-wa="Hi E2E, I have an enquiry." href="#">WhatsApp</a>
+  </nav>
+</div></header>
+
+<main>
+<div class="hero">
+  <svg class="hero-art" viewBox="0 0 600 420" aria-hidden="true" fill="none">
+    <path d="M40 360Q230 40 560 150" stroke="#e8b04b" stroke-opacity=".7" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 12"/>
+    <g stroke="#34d1bf" stroke-opacity=".35"><circle cx="40" cy="360" r="16"/><circle cx="560" cy="150" r="16"/><circle cx="300" cy="150" r="14"/></g>
+    <g fill="#fff"><circle cx="40" cy="360" r="7"/><circle cx="300" cy="150" r="6" fill="#34d1bf"/><circle cx="560" cy="150" r="7" fill="#e8b04b"/></g>
+    <g fill="#fff"><path d="M-28 -4L24 -4Q38 -4 42 0Q38 4 24 4L-28 4Z"/><path d="M-2 -4L-18 -34L-8 -34L16 -4Z"/><path d="M-2 4L-18 34L-8 34L16 4Z"/><path d="M-26 -3L-38 -15L-31 -15L-18 -3Z"/><path d="M-26 3L-38 15L-31 15L-18 3Z"/>
+      <animateMotion dur="12s" repeatCount="indefinite" rotate="auto" path="M40 360Q230 40 560 150"/></g>
+  </svg>
+<div class="wrap">
+    <div class="eyebrow">Vythiri &middot; Wayanad &middot; Kerala</div>
+    <h1>Every journey, <em>end to end.</em></h1>
+    <p class="lead">Travel tickets, stays, pickups and paperwork from one desk in Vythiri. Tell us what you need. We reply on WhatsApp with clear options and prices.</p>
+    <div class="cta">
+      <a class="btn btn-wa" data-wa="Hi E2E, I want a Wayanad trip package." href="#">Get a package quote</a>
+      <a class="btn btn-line" href="tel:+919605841666">Call 9605841666</a>
+    </div>
+    <div class="facts">
+      <div><b>Local hospitality roots</b>20+ years in Wayanad and the Gulf</div>
+      <div><b>One desk</b>Travel, stays and documents</div>
+      <div><b>WhatsApp first</b>Quick replies, simple follow-up</div>
+    </div>
+  </div>
+</div>
+
+<section class="partners" aria-label="Booking partners"><div class="wrap">
+  <div class="cap rev"><div class="eyebrow dk">Authorised booking partners</div><span>Fares and services through trusted platforms.</span></div>
+  <div class="logos rev" id="logos"></div>
+</div></section>
+
+<section id="services" class="svcs">
+  <div class="wrap head rev">
+    <div class="eyebrow dk">Services</div>
+    <h2>Every service, one counter.</h2>
+  </div>
+  <div class="car rev" id="car" role="region" aria-roledescription="carousel" aria-label="Our services">
+    <div class="track" id="track" tabindex="0">
+
+<!-- 1 FLIGHTS -->
+<article class="slide s1" data-short="Flights" aria-label="Flights">
+  <div class="txt"><span class="num">01 / 08</span><h3>Flights</h3><p>Take off, sorted.</p>
+    <div class="sub-chips"><a href="#" data-wa="Hi E2E, I need help with: Flight tickets (Domestic)">Domestic</a><a href="#" data-wa="Hi E2E, I need help with: Flight tickets (International)">International</a></div>
+    <a class="btn btn-wa" href="#" data-wa="Hi E2E, I need help with: Flight tickets">Book a flight</a></div>
+  <div class="art"><svg viewBox="0 0 600 420" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+    <defs><radialGradient id="g1"><stop offset="0" stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs>
+    <circle cx="470" cy="105" r="130" fill="url(#g1)"/><circle cx="470" cy="105" r="30" fill="#fff7d6"/>
+    <g fill="#fff">
+      <g transform="translate(0,70)" opacity=".9"><g class="a-drift" style="animation-duration:28s;animation-delay:-6s"><ellipse rx="48" ry="14"/><ellipse cx="-26" cy="7" rx="30" ry="11"/><ellipse cx="28" cy="7" rx="32" ry="12"/></g></g>
+      <g transform="translate(0,200)" opacity=".55"><g class="a-drift" style="animation-duration:38s;animation-delay:-22s"><ellipse rx="56" ry="15"/><ellipse cx="-30" cy="8" rx="34" ry="12"/><ellipse cx="32" cy="8" rx="36" ry="13"/></g></g>
+      <g transform="translate(0,290)" opacity=".7"><g class="a-drift" style="animation-duration:22s;animation-delay:-4s"><ellipse rx="36" ry="10"/><ellipse cx="-20" cy="5" rx="22" ry="8"/><ellipse cx="22" cy="5" rx="24" ry="9"/></g></g>
+    </g>
+    <path d="M0 420V372h22v-26h18v26h16v-40h20v40h28v-18h24v18h30V420Z" fill="#06284f" opacity=".5"/>
+    <path d="M420 420V380h20v-18h24v18h16v-30h22v30h30v-14h28v14H600V420Z" fill="#06284f" opacity=".5"/>
+    <path d="M60 340Q300 20 560 150" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 12" class="a-dash"/>
+    <circle cx="60" cy="340" r="8" fill="#fff"/><circle cx="60" cy="340" r="10" fill="none" stroke="#fff" stroke-width="2" class="a-pulse"/>
+    <circle cx="560" cy="150" r="8" fill="#ffd166"/><circle cx="560" cy="150" r="10" fill="none" stroke="#ffd166" stroke-width="2" class="a-pulse" style="animation-delay:-1.2s"/>
+    <g>
+      <g fill="#fff"><path d="M-28 -4L24 -4Q38 -4 42 0Q38 4 24 4L-28 4Z"/><path d="M-2 -4L-18 -34L-8 -34L16 -4Z"/><path d="M-2 4L-18 34L-8 34L16 4Z"/><path d="M-26 -3L-38 -15L-31 -15L-18 -3Z"/><path d="M-26 3L-38 15L-31 15L-18 3Z"/></g>
+      <animateMotion dur="9s" repeatCount="indefinite" rotate="auto" path="M60 340Q300 20 560 150" calcMode="spline" keyTimes="0;1" keySplines=".4 0 .6 1"/>
+    </g>
+  </svg></div>
+</article>
+
+<!-- 2 TRAINS -->
+<article class="slide s2" data-short="Trains" aria-label="Trains">
+  <div class="txt"><span class="num">02 / 08</span><h3>Trains</h3><p>No queue. Just go.</p>
+    <div class="sub-chips"><a href="#" data-wa="Hi E2E, I need help with: Train tickets (IRCTC)">IRCTC</a><a href="#" data-wa="Hi E2E, I need help with: Train tickets (Tatkal)">Tatkal</a></div>
+    <a class="btn btn-wa" href="#" data-wa="Hi E2E, I need help with: Train tickets">Book a train</a></div>
+  <div class="art"><svg viewBox="0 0 600 420" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+    <defs><radialGradient id="g2"><stop offset="0" stop-color="#ffe2b0" stop-opacity=".9"/><stop offset="1" stop-color="#ffe2b0" stop-opacity="0"/></radialGradient>
+      <g id="t2"><path d="M30 345l10-46l10 46zM110 345l14-56l14 56zM190 345l10-44l10 44zM270 345l12-52l12 52zM350 345l10-46l10 46zM430 345l14-58l14 58zM510 345l10-44l10 44z"/></g></defs>
+    <circle cx="130" cy="120" r="110" fill="url(#g2)"/><circle cx="130" cy="120" r="34" fill="#ffd9a0"/>
+    <g class="a-scroll" style="animation-duration:40s"><path d="M0 290L70 215L130 270L200 195L270 275L340 225L410 285L480 205L540 270L600 235V345H0Z" fill="#5b3b7a" opacity=".75"/><path transform="translate(600 0)" d="M0 290L70 215L130 270L200 195L270 275L340 225L410 285L480 205L540 270L600 235V345H0Z" fill="#5b3b7a" opacity=".75"/></g>
+    <g class="a-scroll" style="animation-duration:22s"><path d="M0 320Q100 270 200 315T400 310T600 300V345H0Z" fill="#3b2559"/><path transform="translate(600 0)" d="M0 320Q100 270 200 315T400 310T600 300V345H0Z" fill="#3b2559"/></g>
+    <g fill="#1c1230" class="a-scroll" style="animation-duration:9s"><use href="#t2"/><use href="#t2" x="600"/></g>
+    <rect y="345" width="600" height="75" fill="#24152f"/><rect y="345" width="600" height="14" fill="#3a2650"/>
+    <line x1="0" x2="600" y1="352" y2="352" stroke="#5a4376" stroke-width="10" stroke-dasharray="8 20" class="a-dashf"/>
+    <line x1="0" x2="600" y1="346" y2="346" stroke="#d1d5db" stroke-width="2.5"/>
+    <line x1="0" x2="600" y1="244" y2="244" stroke="#cbd5e1" stroke-opacity=".35" stroke-width="1.5"/>
+    <g stroke="#fff" stroke-opacity=".55" stroke-width="3" stroke-linecap="round"><line x1="300" x2="360" y1="150" y2="150" class="a-streak"/><line x1="360" x2="440" y1="190" y2="190" class="a-streak" style="animation-delay:-.8s"/><line x1="200" x2="260" y1="215" y2="215" class="a-streak" style="animation-delay:-1.6s"/></g>
+    <g transform="translate(60,262)"><g class="a-bob">
+      <rect width="136" height="72" rx="10" fill="#f1f5f9"/><rect y="48" width="136" height="9" fill="#ef4444"/>
+      <g fill="#7dd3fc"><rect x="10" y="12" width="24" height="22" rx="4"/><rect x="41" y="12" width="24" height="22" rx="4"/><rect x="72" y="12" width="24" height="22" rx="4"/><rect x="103" y="12" width="24" height="22" rx="4"/></g>
+      <g fill="#0b3a73" opacity=".55"><circle cx="22" cy="26" r="5"/><circle cx="84" cy="26" r="5"/><circle cx="115" cy="26" r="5"/></g>
+      <rect x="142" width="136" height="72" rx="10" fill="#f1f5f9"/><rect x="142" y="48" width="136" height="9" fill="#ef4444"/>
+      <g fill="#7dd3fc"><rect x="152" y="12" width="24" height="22" rx="4"/><rect x="183" y="12" width="24" height="22" rx="4"/><rect x="214" y="12" width="24" height="22" rx="4"/><rect x="245" y="12" width="24" height="22" rx="4"/></g>
+      <g fill="#0b3a73" opacity=".55"><circle cx="195" cy="26" r="5"/><circle cx="257" cy="26" r="5"/><circle cx="164" cy="26" r="5"/></g>
+      <rect x="136" y="56" width="6" height="5" fill="#475569"/><rect x="278" y="56" width="6" height="5" fill="#475569"/>
+      <path d="M284 0H390Q418 0 426 26L434 72H284Z" fill="#ef4444"/><rect x="284" y="48" width="150" height="8" fill="#b91c1c"/>
+      <rect x="298" y="12" width="40" height="22" rx="4" fill="#7dd3fc"/><path d="M350 12H386Q398 12 402 30H350Z" fill="#7dd3fc"/>
+      <path d="M340 0L355 -16H372L388 0" stroke="#cbd5e1" stroke-width="3" fill="none"/>
+      <path d="M434 52L570 14V90Z" fill="#fde68a" class="a-flick"/><circle cx="430" cy="52" r="5" fill="#fde68a"/>
+      <g fill="#1f2937"><circle cx="24" cy="78" r="9"/><circle cx="112" cy="78" r="9"/><circle cx="166" cy="78" r="9"/><circle cx="254" cy="78" r="9"/><circle cx="316" cy="78" r="9"/><circle cx="400" cy="78" r="9"/></g>
+      <g fill="#94a3b8"><circle cx="24" cy="78" r="3"/><circle cx="112" cy="78" r="3"/><circle cx="166" cy="78" r="3"/><circle cx="254" cy="78" r="3"/><circle cx="316" cy="78" r="3"/><circle cx="400" cy="78" r="3"/></g>
+    </g></g>
+  </svg></div>
+</article>
+
+<!-- 3 BUSES -->
+<article class="slide s3" data-short="Buses" aria-label="Buses">
+  <div class="txt"><span class="num">03 / 08</span><h3>Buses</h3><p>Hop on. Wayanad and beyond.</p>
+    <div class="sub-chips"><a href="#" data-wa="Hi E2E, I need help with: Bus tickets (Intercity)">Intercity</a><a href="#" data-wa="Hi E2E, I need help with: Bus tickets (Wayanad routes)">Wayanad routes</a></div>
+    <a class="btn btn-wa" href="#" data-wa="Hi E2E, I need help with: Bus tickets">Book a bus</a></div>
+  <div class="art"><svg viewBox="0 0 600 420" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+    <defs><radialGradient id="g3"><stop offset="0" stop-color="#fff" stop-opacity=".8"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+      <g id="p3"><path d="M40 340Q46 300 36 262" stroke="#4a2f1f" stroke-width="6" fill="none" stroke-linecap="round"/><g fill="#166534"><path d="M36 262Q10 246 -14 258Q12 252 36 262Z"/><path d="M36 262Q26 236 4 232Q30 236 36 262Z"/><path d="M36 262Q46 236 70 232Q44 240 36 262Z"/><path d="M36 262Q62 248 86 260Q58 252 36 262Z"/></g>
+      <path d="M300 340Q306 300 296 262" stroke="#4a2f1f" stroke-width="6" fill="none" stroke-linecap="round"/><g fill="#15803d"><path d="M296 262Q270 246 246 258Q272 252 296 262Z"/><path d="M296 262Q286 236 264 232Q290 236 296 262Z"/><path d="M296 262Q306 236 330 232Q304 240 296 262Z"/><path d="M296 262Q322 248 346 260Q318 252 296 262Z"/></g>
+      <path d="M520 340Q526 304 516 270" stroke="#4a2f1f" stroke-width="6" fill="none" stroke-linecap="round"/><g fill="#166534"><path d="M516 270Q490 254 466 266Q492 260 516 270Z"/><path d="M516 270Q506 244 484 240Q510 244 516 270Z"/><path d="M516 270Q526 244 550 240Q524 248 516 270Z"/><path d="M516 270Q542 256 566 268Q538 260 516 270Z"/></g></g></defs>
+    <circle cx="470" cy="100" r="120" fill="url(#g3)"/><circle cx="470" cy="100" r="28" fill="#fffbe0"/>
+    <g fill="#fff" opacity=".8"><g transform="translate(0,80)"><g class="a-drift" style="animation-duration:34s;animation-delay:-10s"><ellipse rx="44" ry="12"/><ellipse cx="-22" cy="6" rx="26" ry="9"/><ellipse cx="24" cy="6" rx="28" ry="10"/></g></g></g>
+    <g class="a-scroll" style="animation-duration:36s"><path d="M0 300Q80 240 170 290T340 270T520 280T600 260V340H0Z" fill="#0a6b5c" opacity=".7"/><path transform="translate(600 0)" d="M0 300Q80 240 170 290T340 270T520 280T600 260V340H0Z" fill="#0a6b5c" opacity=".7"/></g>
+    <g class="a-scroll" style="animation-duration:9s"><use href="#p3"/><use href="#p3" x="600"/></g>
+    <rect y="334" width="600" height="86" fill="#1f2933"/><rect y="334" width="600" height="5" fill="#cbd5e1" opacity=".5"/>
+    <line x1="0" x2="600" y1="384" y2="384" stroke="#fff" stroke-width="5" stroke-dasharray="30 26" class="a-dashf" style="--p:56;animation-duration:.55s"/>
+    <g transform="translate(110,196)"><g class="a-bob">
+      <g><rect x="40" y="-8" width="230" height="8" rx="3" fill="#cbd5e1"/>
+        <rect x="52" y="-30" width="42" height="24" rx="5" fill="#f97316"/><path d="M66 -30v-6h14v6" stroke="#9a3412" stroke-width="3" fill="none"/>
+        <rect x="108" y="-24" width="36" height="18" rx="5" fill="#6366f1"/><rect x="158" y="-34" width="48" height="28" rx="5" fill="#ef4444"/><path d="M172 -34v-6h20v6" stroke="#7f1d1d" stroke-width="3" fill="none"/></g>
+      <rect width="330" height="120" rx="20" fill="#f8fafc"/><rect y="72" width="330" height="26" fill="#14b8a6"/>
+      <g fill="#bae6fd"><rect x="18" y="18" width="36" height="34" rx="6"/><rect x="62" y="18" width="36" height="34" rx="6"/><rect x="106" y="18" width="36" height="34" rx="6"/><rect x="150" y="18" width="36" height="34" rx="6"/><rect x="194" y="18" width="36" height="34" rx="6"/></g>
+      <g fill="#0f4c75" opacity=".6"><circle cx="36" cy="36" r="7"/><path d="M26 52Q36 40 46 52Z"/><circle cx="124" cy="36" r="7"/><path d="M114 52Q124 40 134 52Z"/><circle cx="212" cy="36" r="7"/><path d="M202 52Q212 40 222 52Z"/></g>
+      <path d="M244 18H304Q330 18 330 40V54H244Z" fill="#7dd3fc"/>
+      <path d="M338 92L460 60V124Z" fill="#fde68a" class="a-flick"/><circle cx="322" cy="90" r="6" fill="#fde68a"/>
+      <g><circle cx="80" cy="122" r="26" fill="#111827"/><circle cx="80" cy="122" r="12" fill="#cbd5e1"/><g transform="translate(80,122)"><g class="a-spin"><path d="M-10 0H10M0 -10V10" stroke="#475569" stroke-width="3"/></g></g>
+      <circle cx="250" cy="122" r="26" fill="#111827"/><circle cx="250" cy="122" r="12" fill="#cbd5e1"/><g transform="translate(250,122)"><g class="a-spin"><path d="M-10 0H10M0 -10V10" stroke="#475569" stroke-width="3"/></g></g></g>
+    </g></g>
+    <g fill="#d1d5db"><circle cx="96" cy="326" r="8" class="a-puff"/><circle cx="96" cy="326" r="6" class="a-puff" style="animation-delay:-.8s"/></g>
+  </svg></div>
+</article>
+
+<!-- 4 STAYS -->
+<article class="slide s4" data-short="Stays" aria-label="Stays">
+  <div class="txt"><span class="num">04 / 08</span><h3>Resorts &amp; Villas</h3><p>Wake up to Wayanad.</p>
+    <div class="sub-chips"><a href="#" data-wa="Hi E2E, I need help with: Resort booking">Resorts</a><a href="#" data-wa="Hi E2E, I need help with: Private pool villa booking">Pool villas</a><a href="#" data-wa="Hi E2E, I need help with: Homestay booking">Homestays</a><a href="#" data-wa="Hi E2E, I need help with: Hotel booking">Hotels</a></div>
+    <a class="btn btn-wa" href="#" data-wa="Hi E2E, I need help with: Resort and villa booking">Find a stay</a></div>
+  <div class="art"><svg viewBox="0 0 600 420" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+    <defs><radialGradient id="g4"><stop offset="0" stop-color="#ffd28a" stop-opacity=".9"/><stop offset="1" stop-color="#ffd28a" stop-opacity="0"/></radialGradient>
+      <filter id="b4"><feGaussianBlur stdDeviation="7"/></filter><clipPath id="c4"><rect x="150" y="350" width="300" height="52" rx="14"/></clipPath></defs>
+    <g fill="#fff"><circle cx="60" cy="50" r="2" class="a-twinkle"/><circle cx="150" cy="90" r="1.6" class="a-twinkle" style="animation-delay:-1s"/><circle cx="250" cy="40" r="2" class="a-twinkle" style="animation-delay:-2s"/><circle cx="380" cy="70" r="1.8" class="a-twinkle" style="animation-delay:-.5s"/><circle cx="470" cy="38" r="2.2" class="a-twinkle" style="animation-delay:-1.6s"/><circle cx="540" cy="100" r="1.6" class="a-twinkle" style="animation-delay:-2.4s"/></g>
+    <circle cx="300" cy="250" r="190" fill="url(#g4)"/><circle cx="300" cy="238" r="62" fill="#ffd9a0"/>
+    <path d="M0 300L90 220L170 280L260 190L350 275L440 215L520 270L600 235V345H0Z" fill="#3a1d5c" opacity=".85"/>
+    <rect y="334" width="600" height="86" fill="#2a1744"/>
+    <g class="a-sway" style="transform-origin:50% 100%"><path d="M70 345Q78 290 64 235" stroke="#4a2f1f" stroke-width="8" fill="none" stroke-linecap="round"/><g fill="#166534"><path d="M64 235Q40 205 8 222Q42 212 64 235Z"/><path d="M64 235Q50 195 20 190Q55 195 64 235Z"/><path d="M64 235Q80 195 110 190Q84 205 64 235Z"/><path d="M64 235Q90 210 120 228Q88 214 64 235Z"/><path d="M64 235Q64 200 70 175Q76 205 64 235Z" fill="#15803d"/></g></g>
+    <g class="a-sway" style="transform-origin:50% 100%;animation-delay:-2s"><path d="M540 350Q548 296 538 245" stroke="#4a2f1f" stroke-width="8" fill="none" stroke-linecap="round"/><g fill="#166534"><path d="M538 245Q514 215 482 232Q516 222 538 245Z"/><path d="M538 245Q524 205 494 200Q529 205 538 245Z"/><path d="M538 245Q554 205 584 200Q558 215 538 245Z"/><path d="M538 245Q564 220 594 238Q562 224 538 245Z"/><path d="M538 245Q538 210 544 185Q550 215 538 245Z" fill="#15803d"/></g></g>
+    <rect x="160" y="254" width="280" height="10" fill="#3b2a20"/><rect x="170" y="262" width="260" height="78" fill="#f3e3cf"/>
+    <rect x="215" y="205" width="170" height="52" fill="#fff1df"/><rect x="205" y="196" width="190" height="12" fill="#3b2a20"/>
+    <g filter="url(#b4)" fill="#ffd166" class="a-flick"><rect x="190" y="276" width="70" height="50"/><rect x="340" y="276" width="70" height="50"/><rect x="235" y="218" width="130" height="34"/></g>
+    <g fill="#ffd166"><rect x="190" y="276" width="70" height="50"/><rect x="340" y="276" width="70" height="50"/><rect x="235" y="218" width="130" height="34"/></g>
+    <g stroke="#b7791f" stroke-width="2"><line x1="225" x2="225" y1="276" y2="326"/><line x1="350" x2="350" y1="276" y2="326"/><line x1="278" x2="278" y1="218" y2="252"/><line x1="322" x2="322" y1="218" y2="252"/></g>
+    <rect x="276" y="284" width="48" height="56" fill="#7c4a2d"/><circle cx="316" cy="314" r="2.5" fill="#ffd166"/>
+    <rect x="150" y="350" width="300" height="52" rx="14" fill="#22d3ee"/>
+    <g clip-path="url(#c4)"><g class="a-wave"><path d="M0 366q20 -8 40 0t40 0t40 0t40 0t40 0t40 0t40 0t40 0t40 0t40 0t40 0t40 0t40 0t40 0" transform="translate(150 0)" stroke="#fff" stroke-opacity=".7" stroke-width="3" fill="none"/><path d="M0 384q20 -8 40 0t40 0t40 0t40 0t40 0t40 0t40 0t40 0t40 0t40 0t40 0t40 0t40 0t40 0" transform="translate(150 0)" stroke="#fff" stroke-opacity=".45" stroke-width="3" fill="none"/></g></g>
+    <rect x="150" y="350" width="300" height="52" rx="14" fill="none" stroke="#f8fafc" stroke-width="5"/>
+    <line x1="500" x2="500" y1="300" y2="352" stroke="#f1f5f9" stroke-width="3"/><path d="M468 304A32 32 0 0 1 532 304Z" fill="#ef4444"/><path d="M468 304A32 32 0 0 1 500 272V304Z" fill="#fca5a5"/>
+    <g fill="#ffd166"><circle cx="190" cy="342" r="3" class="a-twinkle"/><circle cx="410" cy="342" r="3" class="a-twinkle" style="animation-delay:-1.4s"/></g>
+  </svg></div>
+</article>
+
+<!-- 5 PACKAGES -->
+<article class="slide s5" data-short="Packages" aria-label="Wayanad packages">
+  <div class="txt"><span class="num">05 / 08</span><h3>Wayanad Packages</h3><p>Stay. Ride. Eat. Explore.</p>
+    <div class="sub-chips"><a href="#" data-wa="Hi E2E, I need help with: Wayanad package (Stay)">Stay</a><a href="#" data-wa="Hi E2E, I need help with: Wayanad package (Pickup)">Pickup</a><a href="#" data-wa="Hi E2E, I need help with: Wayanad package (Food)">Food</a><a href="#" data-wa="Hi E2E, I need help with: Wayanad package (Sightseeing)">Sightseeing</a></div>
+    <a class="btn btn-wa" href="#" data-wa="Hi E2E, please plan a Wayanad package for me.">Plan my trip</a></div>
+  <div class="art"><svg viewBox="0 0 600 420" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+    <defs><radialGradient id="g5"><stop offset="0" stop-color="#fff6c9" stop-opacity=".9"/><stop offset="1" stop-color="#fff6c9" stop-opacity="0"/></radialGradient></defs>
+    <circle cx="480" cy="90" r="110" fill="url(#g5)"/><circle cx="480" cy="90" r="26" fill="#fff6c9"/>
+    <g transform="translate(0,70)"><g class="a-drift" style="animation-duration:18s"><path d="M0 0q8 -8 16 0q8 -8 16 0" stroke="#fff" stroke-width="2" fill="none"/></g></g>
+    <g transform="translate(0,110)"><g class="a-drift" style="animation-duration:24s;animation-delay:-9s"><path d="M0 0q6 -6 12 0q6 -6 12 0" stroke="#fff" stroke-width="2" fill="none"/></g></g>
+    <path d="M0 250Q80 170 170 230T330 200T480 215T600 190V340H0Z" fill="#2f8f6b" opacity=".85"/>
+    <path d="M322 202V262" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-dasharray="14 8" class="a-fall"/>
+    <ellipse cx="322" cy="266" rx="20" ry="7" fill="#fff" opacity=".55" class="a-pulse"/>
+    <g fill="#fff" opacity=".28"><g transform="translate(0,225)"><g class="a-drift" style="animation-duration:44s"><ellipse rx="90" ry="12"/></g></g><g transform="translate(0,262)"><g class="a-drift" style="animation-duration:58s;animation-delay:-25s"><ellipse rx="110" ry="14"/></g></g></g>
+    <path d="M0 300Q120 240 240 290T460 280T600 265V360H0Z" fill="#1f7a55"/>
+    <g stroke="#52c293" stroke-opacity=".55" stroke-width="2" fill="none"><path d="M30 306Q110 262 200 304"/><path d="M60 322Q130 284 215 318"/><path d="M290 300Q370 262 450 296"/><path d="M310 318Q385 284 470 312"/></g>
+    <path d="M0 350Q150 310 300 345T600 330V420H0Z" fill="#145c40"/>
+    <path d="M-20 392C150 360 250 405 380 372S560 360 640 345" stroke="#3d3b36" stroke-width="22" fill="none" stroke-linecap="round"/>
+    <path d="M-20 392C150 360 250 405 380 372S560 360 640 345" stroke="#f5f5f4" stroke-width="2.5" fill="none" stroke-dasharray="12 12"/>
+    <g><g><rect x="-22" y="-24" width="44" height="14" rx="4" fill="#ef4444"/><rect x="-13" y="-36" width="26" height="14" rx="3" fill="#fef3c7"/><circle cx="-5" cy="-29" r="3" fill="#92400e"/><circle cx="5" cy="-29" r="3" fill="#1e3a8a"/><circle cx="-13" cy="-9" r="5.5" fill="#111827"/><circle cx="13" cy="-9" r="5.5" fill="#111827"/></g>
+      <animateMotion dur="11s" repeatCount="indefinite" rotate="auto" path="M-20 392C150 360 250 405 380 372S560 360 640 345"/></g>
+    <g transform="translate(120,236)"><ellipse rx="14" ry="5" fill="#f59e0b" class="a-pulse"/><g class="a-float"><path d="M0 0L-11 -21A15 15 0 1 1 11 -21Z" fill="#f59e0b"/><circle cy="-30" r="9" fill="#fff"/><path d="M-5 -28L0 -34L5 -28V-24H-5Z" fill="#f59e0b"/></g></g>
+    <g transform="translate(300,170)"><ellipse rx="14" ry="5" fill="#a855f7" class="a-pulse" style="animation-delay:-.6s"/><g class="a-float2"><path d="M0 0L-11 -21A15 15 0 1 1 11 -21Z" fill="#a855f7"/><circle cy="-30" r="9" fill="#fff"/><path d="M0 -35L1.8 -31L6 -30.6L3 -27.8L3.8 -23.5L0 -25.7L-3.8 -23.5L-3 -27.8L-6 -30.6L-1.8 -31Z" fill="#a855f7"/></g></g>
+    <g transform="translate(470,236)"><ellipse rx="14" ry="5" fill="#3b82f6" class="a-pulse" style="animation-delay:-1.2s"/><g class="a-float3"><path d="M0 0L-11 -21A15 15 0 1 1 11 -21Z" fill="#3b82f6"/><circle cy="-30" r="9" fill="#fff"/><path d="M-4 -34H4V-28Q4 -24 0 -24Q-4 -24 -4 -28Z" fill="#3b82f6"/><path d="M4 -33q4 0 0 5" stroke="#3b82f6" stroke-width="1.6" fill="none"/></g></g>
+    <g transform="translate(70,340)"><ellipse rx="14" ry="5" fill="#ef4444" class="a-pulse" style="animation-delay:-1.8s"/><g class="a-float"><path d="M0 0L-11 -21A15 15 0 1 1 11 -21Z" fill="#ef4444"/><circle cy="-30" r="9" fill="#fff"/><rect x="-6" y="-31" width="12" height="5" rx="2" fill="#ef4444"/><circle cx="-3.5" cy="-25" r="1.6" fill="#ef4444"/><circle cx="3.5" cy="-25" r="1.6" fill="#ef4444"/></g></g>
+  </svg></div>
+</article>
+
+<!-- 6 VISA & PASSPORT -->
+<article class="slide s6" data-short="Visa" aria-label="Visa and passport">
+  <div class="txt"><span class="num">06 / 08</span><h3>Visa &amp; Passport</h3><p>Paperwork, handled.</p>
+    <div class="sub-chips"><a href="#" data-wa="Hi E2E, I need help with: Visa">Visa</a><a href="#" data-wa="Hi E2E, I need help with: Passport (new or renewal)">Passport</a><a href="#" data-wa="Hi E2E, I need help with: PCC">PCC</a><a href="#" data-wa="Hi E2E, I need help with: Certificate attestation">Attestation</a></div>
+    <a class="btn btn-wa" href="#" data-wa="Hi E2E, I need help with: Visa and passport">Start my visa</a></div>
+  <div class="art"><svg viewBox="0 0 600 420" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+    <circle cx="300" cy="210" r="130" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="2"/>
+    <g fill="none" stroke="#fff" stroke-opacity=".22" stroke-width="2"><ellipse cx="300" cy="210" ry="130" rx="130"><animate attributeName="rx" values="130;70;6;70;130" dur="8s" repeatCount="indefinite"/></ellipse><ellipse cx="300" cy="210" ry="130" rx="130"><animate attributeName="rx" values="130;70;6;70;130" dur="8s" begin="-2.7s" repeatCount="indefinite"/></ellipse><ellipse cx="300" cy="210" ry="130" rx="130"><animate attributeName="rx" values="130;70;6;70;130" dur="8s" begin="-5.3s" repeatCount="indefinite"/></ellipse><ellipse cx="300" cy="210" rx="130" ry="34"/><line x1="170" x2="430" y1="210" y2="210"/></g>
+    <path d="M130 210a170 60 0 1 1 340 0a170 60 0 1 1 -340 0" fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="2" stroke-dasharray="3 9"/>
+    <g fill="#fff"><path d="M-14 -2L12 -2Q19 -2 21 0Q19 2 12 2L-14 2Z"/><path d="M-1 -2L-9 -17L-4 -17L8 -2Z"/><path d="M-1 2L-9 17L-4 17L8 2Z"/><path d="M-13 -1.5L-19 -7.5L-15.5 -7.5L-9 -1.5Z"/><path d="M-13 1.5L-19 7.5L-15.5 7.5L-9 1.5Z"/><animateMotion dur="9s" repeatCount="indefinite" rotate="auto" path="M130 210a170 60 0 1 1 340 0a170 60 0 1 1 -340 0"/></g>
+    <g class="a-float2"><path d="M350 150L486 140L494 322L358 332Z" fill="#f8fafc"/><path d="M368 170L470 164L474 220L372 226Z" fill="#dbeafe"/><rect x="378" y="176" width="26" height="34" rx="3" fill="#93c5fd"/><g stroke="#94a3b8" stroke-width="4" stroke-linecap="round"><line x1="414" x2="460" y1="182" y2="180"/><line x1="414" x2="452" y1="194" y2="192"/><line x1="414" x2="456" y1="206" y2="204"/></g><g stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"><line x1="372" x2="474" y1="244" y2="240"/><line x1="374" x2="440" y1="258" y2="255"/></g>
+      <g class="a-stamp"><circle cx="418" cy="292" r="24" fill="none" stroke="#ef4444" stroke-width="3" stroke-dasharray="4 3"/><circle cx="418" cy="292" r="16" fill="none" stroke="#ef4444" stroke-width="2"/><path d="M410 296L418 288L428 290L420 298Z" fill="#ef4444"/></g>
+      <g class="a-stamp" style="animation-delay:-2.6s"><rect x="448" y="262" width="34" height="26" rx="4" fill="none" stroke="#16a34a" stroke-width="3"/><path d="M455 276L462 283L475 268" fill="none" stroke="#16a34a" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></g></g>
+    <g class="a-float"><g class="a-tilt"><rect x="225" y="120" width="150" height="200" rx="12" fill="#12307a"/><rect x="233" y="128" width="134" height="184" rx="8" fill="none" stroke="#e8b04b" stroke-width="2"/><circle cx="300" cy="205" r="34" fill="none" stroke="#e8b04b" stroke-width="3"/><circle cx="300" cy="205" r="22" fill="none" stroke="#e8b04b" stroke-width="2"/><ellipse cx="300" cy="205" rx="9" ry="22" fill="none" stroke="#e8b04b" stroke-width="2"/><line x1="278" x2="322" y1="205" y2="205" stroke="#e8b04b" stroke-width="2"/><text x="300" y="162" text-anchor="middle" font-size="13" font-weight="700" letter-spacing="3" fill="#e8b04b" font-family="system-ui,sans-serif">PASSPORT</text><rect x="282" y="270" width="36" height="14" rx="7" fill="none" stroke="#e8b04b" stroke-width="2"/></g></g>
+    <g class="a-float3"><rect x="60" y="258" width="140" height="72" rx="10" fill="#fff"/><line x1="152" x2="152" y1="262" y2="326" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="3 4"/><g fill="#e2e8f0"><rect x="72" y="270" width="52" height="7" rx="3"/><rect x="72" y="284" width="70" height="7" rx="3"/><rect x="72" y="298" width="40" height="7" rx="3"/></g><path d="M122 316L134 311L140 314L128 319Z" fill="#1d4ed8"/><line x1="176" x2="176" y1="268" y2="320" stroke="#1e293b" stroke-width="22" stroke-dasharray="2 2 4 2 1 3 3 2"/></g>
+  </svg></div>
+</article>
+
+<!-- 7 FOREX -->
+<article class="slide s7" data-short="Forex" aria-label="Forex and money transfer">
+  <div class="txt"><span class="num">07 / 08</span><h3>Forex &amp; Transfers</h3><p>Money that travels.</p>
+    <div class="sub-chips"><a href="#" data-wa="Hi E2E, I need help with: Currency exchange">Currency exchange</a><a href="#" data-wa="Hi E2E, I need help with: Money transfer">Money transfer</a></div>
+    <a class="btn btn-wa" href="#" data-wa="Hi E2E, I need help with: Forex and money transfer">Get a rate</a></div>
+  <div class="art"><svg viewBox="0 0 600 420" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+    <defs><radialGradient id="cg" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#fde68a"/><stop offset="1" stop-color="#f59e0b"/></radialGradient></defs>
+    <path d="M110 210a190 100 0 1 1 380 0a190 100 0 1 1 -380 0" fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="2" stroke-dasharray="3 9"/>
+    <g fill="#fff"><path d="M70 90h10M75 85v10" stroke="#fff" stroke-width="2" class="a-twinkle"/><path d="M520 330h10M525 325v10" stroke="#fff" stroke-width="2" class="a-twinkle" style="animation-delay:-1.5s"/><path d="M540 80h8M544 76v8" stroke="#fff" stroke-width="2" class="a-twinkle" style="animation-delay:-.8s"/></g>
+    <g class="a-float2"><path d="M200 168L404 146L414 248L210 270Z" fill="#3b82f6"/><path d="M212 178L394 158L402 238L220 258Z" fill="none" stroke="#bfdbfe" stroke-width="2"/><circle cx="306" cy="208" r="26" fill="#2563eb"/><text x="306" y="219" text-anchor="middle" font-size="30" font-weight="800" fill="#dbeafe" font-family="system-ui,sans-serif">$</text></g>
+    <g class="a-float"><rect x="215" y="172" width="170" height="96" rx="10" fill="#22c55e"/><rect x="224" y="181" width="152" height="78" rx="6" fill="none" stroke="#bbf7d0" stroke-width="2"/><circle cx="300" cy="220" r="26" fill="#16a34a"/><text x="300" y="232" text-anchor="middle" font-size="32" font-weight="800" fill="#dcfce7" font-family="system-ui,sans-serif">₹</text><circle cx="240" cy="200" r="7" fill="none" stroke="#bbf7d0" stroke-width="2"/><circle cx="360" cy="240" r="7" fill="none" stroke="#bbf7d0" stroke-width="2"/></g>
+    <g><circle r="24" fill="url(#cg)"/><circle r="18" fill="none" stroke="#b45309" stroke-opacity=".5" stroke-width="2"/><text y="8" text-anchor="middle" font-size="22" font-weight="800" fill="#92400e" font-family="system-ui,sans-serif">$</text><animateMotion dur="12s" repeatCount="indefinite" path="M110 210a190 100 0 1 1 380 0a190 100 0 1 1 -380 0"/></g>
+    <g><circle r="24" fill="url(#cg)"/><circle r="18" fill="none" stroke="#b45309" stroke-opacity=".5" stroke-width="2"/><text y="8" text-anchor="middle" font-size="22" font-weight="800" fill="#92400e" font-family="system-ui,sans-serif">€</text><animateMotion dur="12s" begin="-3s" repeatCount="indefinite" path="M110 210a190 100 0 1 1 380 0a190 100 0 1 1 -380 0"/></g>
+    <g><circle r="24" fill="url(#cg)"/><circle r="18" fill="none" stroke="#b45309" stroke-opacity=".5" stroke-width="2"/><text y="8" text-anchor="middle" font-size="22" font-weight="800" fill="#92400e" font-family="system-ui,sans-serif">£</text><animateMotion dur="12s" begin="-6s" repeatCount="indefinite" path="M110 210a190 100 0 1 1 380 0a190 100 0 1 1 -380 0"/></g>
+    <g><circle r="24" fill="url(#cg)"/><circle r="18" fill="none" stroke="#b45309" stroke-opacity=".5" stroke-width="2"/><text y="8" text-anchor="middle" font-size="22" font-weight="800" fill="#92400e" font-family="system-ui,sans-serif">₹</text><animateMotion dur="12s" begin="-9s" repeatCount="indefinite" path="M110 210a190 100 0 1 1 380 0a190 100 0 1 1 -380 0"/></g>
+    <g transform="translate(300,350)"><g class="a-spin-slow"><path d="M-30 0A30 30 0 0 1 22 -15" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M16 -26L32 -12L13 -8Z" fill="#fff"/><path d="M30 0A30 30 0 0 1 -22 15" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M-16 26L-32 12L-13 8Z" fill="#fff"/></g></g>
+  </svg></div>
+</article>
+
+<!-- 8 DOCUMENTS -->
+<article class="slide s8" data-short="Documents" aria-label="Documents and business">
+  <div class="txt"><span class="num">08 / 08</span><h3>Documents &amp; Business</h3><p>One counter. All paperwork.</p>
+    <div class="sub-chips"><a href="#" data-wa="Hi E2E, I need help with: PAN card">PAN</a><a href="#" data-wa="Hi E2E, I need help with: Udyam registration">Udyam</a><a href="#" data-wa="Hi E2E, I need help with: GST">GST</a><a href="#" data-wa="Hi E2E, I need help with: ITR filing">ITR</a><a href="#" data-wa="Hi E2E, I need help with: Digital signature">Digital signature</a><a href="#" data-wa="Hi E2E, I need help with: Company registration">Company</a><a href="#" data-wa="Hi E2E, I need help with: RTO work">RTO</a></div>
+    <a class="btn btn-wa" href="#" data-wa="Hi E2E, I need help with: documents and registrations">Get it done</a></div>
+  <div class="art"><svg viewBox="0 0 600 420" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+    <rect x="150" y="372" width="300" height="12" rx="4" fill="#fff" opacity=".18"/><rect x="170" y="384" width="260" height="10" rx="4" fill="#fff" opacity=".12"/>
+    <g class="a-float"><rect x="50" y="70" width="190" height="118" rx="12" fill="#dbeafe"/><path d="M50 96V82a12 12 0 0 1 12 -12H228a12 12 0 0 1 12 12V96Z" fill="#1d4ed8"/><rect x="82" y="104" width="44" height="58" rx="6" fill="#93c5fd"/><circle cx="104" cy="122" r="9" fill="#1e3a8a"/><path d="M90 156Q104 138 118 156Z" fill="#1e3a8a"/><g fill="#1e3a8a" opacity=".7"><rect x="140" y="108" width="84" height="8" rx="4"/><rect x="140" y="126" width="64" height="7" rx="3"/><rect x="140" y="142" width="74" height="7" rx="3"/></g><g class="a-pop"><circle cx="232" cy="72" r="14" fill="#22c55e"/><path d="M225 72L230 77L240 66" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></g></g>
+    <g class="a-float2"><rect x="290" y="60" width="230" height="155" rx="10" fill="#fffbeb" stroke="#e8b04b" stroke-width="3"/><rect x="302" y="72" width="206" height="131" rx="6" fill="none" stroke="#e8b04b" stroke-width="1.5" stroke-dasharray="4 4"/><g fill="#d6bd8a"><rect x="350" y="92" width="110" height="9" rx="4"/><rect x="330" y="112" width="150" height="6" rx="3"/><rect x="330" y="126" width="150" height="6" rx="3"/><rect x="345" y="140" width="120" height="6" rx="3"/></g><circle cx="320" cy="190" r="0"/><path d="M468 190L460 214L470 208L480 214L472 190Z" fill="#c9922b"/><circle cx="470" cy="184" r="18" fill="#e8b04b"/><circle cx="470" cy="184" r="11" fill="none" stroke="#fff" stroke-width="2"/>
+      <g class="a-slam"><circle cx="400" cy="160" r="38" fill="none" stroke="#dc2626" stroke-width="5"/><circle cx="400" cy="160" r="29" fill="none" stroke="#dc2626" stroke-width="2"/><path d="M386 160L396 170L416 148" fill="none" stroke="#dc2626" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></g></g>
+    <g class="a-float3"><rect x="100" y="222" width="140" height="150" rx="8" fill="#fff"/><rect x="112" y="234" width="46" height="22" rx="5" fill="#0e7c86"/><text x="135" y="250" text-anchor="middle" font-size="13" font-weight="800" fill="#fff" font-family="system-ui,sans-serif">GST</text><g fill="#cbd5e1"><rect x="112" y="268" width="116" height="7" rx="3"/><rect x="112" y="284" width="90" height="7" rx="3"/></g><g stroke="#e2e8f0" stroke-width="2"><line x1="112" x2="228" y1="306" y2="306"/><line x1="112" x2="228" y1="326" y2="326"/><line x1="112" x2="228" y1="346" y2="346"/><line x1="160" x2="160" y1="300" y2="352"/></g><g class="a-pop" style="animation-delay:-1.5s"><circle cx="236" cy="228" r="13" fill="#22c55e"/><path d="M230 228L234 232L242 223" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></g></g>
+    <g class="a-float"><rect x="262" y="246" width="170" height="100" rx="12" fill="#fde68a"/><rect x="274" y="288" width="60" height="9" rx="4" fill="#92400e" opacity=".6"/><rect x="274" y="304" width="90" height="7" rx="3" fill="#92400e" opacity=".4"/><rect x="274" y="318" width="70" height="7" rx="3" fill="#92400e" opacity=".4"/><path d="M280 278L288 262H318L326 278Z" fill="#92400e" opacity=".85"/><rect x="274" y="274" width="60" height="14" rx="5" fill="#92400e"/><circle cx="290" cy="290" r="4.5" fill="#fde68a"/><circle cx="320" cy="290" r="4.5" fill="#fde68a"/><g class="a-pop" style="animation-delay:-3s"><circle cx="428" cy="250" r="13" fill="#22c55e"/><path d="M422 250L426 254L434 245" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></g></g>
+    <g class="a-float2"><rect x="452" y="254" width="100" height="84" rx="8" fill="#f8fafc"/><path d="M464 306q10 -34 18 0t18 0t18 -6t14 6" fill="none" stroke="#1d4ed8" stroke-width="3" stroke-linecap="round" class="a-sign"/><line x1="464" x2="540" y1="318" y2="318" stroke="#cbd5e1" stroke-width="2"/><rect x="464" y="266" width="50" height="7" rx="3" fill="#cbd5e1"/></g>
+  </svg></div>
+</article>
+
+    </div>
+    <button class="cnav prev" type="button" aria-label="Previous service" id="prev">&#8249;</button>
+    <button class="cnav next" type="button" aria-label="Next service" id="next">&#8250;</button>
+  </div>
+  <div class="wrap"><div class="tabs2 rev" id="tabs2" role="tablist" aria-label="Choose a service"></div></div>
+</section>
+
+<section class="pk" id="packages"><div class="wrap grid">
+  <div class="rev">
+    <div class="eyebrow">Wayanad packages</div>
+    <h2>Planned locally, priced fairly.</h2>
+    <p>We work with resorts, villas, drivers and restaurants we know in Vythiri and around Wayanad, so your trip is arranged by people on the ground.</p>
+    <a class="btn btn-wa" data-wa="Hi E2E, please plan a Wayanad package for me." href="#">Plan my trip</a>
+  </div>
+  <div class="tiles rev">
+    <div class="tile"><span>01</span><h3>Stay</h3><p>Resorts, hotels, private pool villas and homestays.</p></div>
+    <div class="tile"><span>02</span><h3>Pickup</h3><p>Airport, railway station and bus stand pickup with local drivers.</p></div>
+    <div class="tile"><span>03</span><h3>Food</h3><p>Meals and restaurant arrangements to suit your group.</p></div>
+    <div class="tile"><span>04</span><h3>Experiences</h3><p>Sightseeing and activities across Wayanad.</p></div>
+  </div>
+</div></section>
+
+<section id="process"><div class="wrap">
+  <div class="head rev">
+    <div class="eyebrow dk">How it works</div>
+    <h2>Three steps. No running around.</h2>
+  </div>
+  <ol class="steps rev">
+    <li><h3>Tell us</h3><p>Send dates, group size and what you need on WhatsApp or by phone.</p></li>
+    <li><h3>We quote</h3><p>We reply with options and a clear price. Change anything you like.</p></li>
+    <li><h3>Confirm and go</h3><p>Pay to confirm. You get your tickets, vouchers and pickup details.</p></li>
+  </ol>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap cgrid">
+  <div class="cinfo rev">
+    <div class="eyebrow dk">Contact</div>
+    <h2>Start with a message.</h2>
+    <p>Most enquiries start on WhatsApp. Send the form and we will pick it up from there.</p>
+    <dl>
+      <div><dt>Phone</dt><dd><a href="tel:+919605841666">9605841666</a> / <a href="tel:+919605841667">9605841667</a></dd></div>
+      <div><dt>Visit</dt><dd>E2E Travel Solutions, Vythiri, Wayanad</dd></div>
+    </dl>
+  </div>
+  <form id="lead" class="rev">
+    <label>Your name<input name="name" required autocomplete="name"></label>
+    <label>Service<select name="service" id="serviceSel"></select></label>
+    <label>Travel date (optional)<input type="date" name="date"></label>
+    <label>Guests (optional)<input type="number" name="guests" min="1" inputmode="numeric"></label>
+    <label class="full">Details<textarea name="notes" placeholder="Route, budget, anything else"></textarea></label>
+    <button class="btn btn-wa full" type="submit" style="justify-content:center">Send on WhatsApp</button>
+    <div class="note full">Opens WhatsApp with your details filled in. Nothing is stored on this page. By sending you agree we may reply to you on WhatsApp about this enquiry.</div>
+  </form>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <div><b>E2E Travel Solutions</b><br>Vythiri, Wayanad, Kerala</div>
+  <div>Services and partner availability may vary.<br>Fares and rates are confirmed at booking.</div>
+</div></footer>
+
+<a class="btn btn-wa sticky" data-wa="Hi E2E, I have an enquiry." href="#">WhatsApp</a>
+
+<script>
+/* ---------- content + WhatsApp ---------- */
+const WA="919605841666";
+function wa(t){return "https://wa.me/"+WA+"?text="+encodeURIComponent(t)}
+function src(){const p=new URLSearchParams(location.search);return p.get("utm_source")||p.get("src")||""}
+function tag(t){const s=src();return s?t+"\n(source: "+s+")":t}
+const SERVICE_NAMES=["Flight tickets","Train tickets","Bus tickets","Resort and villa booking","Wayanad packages","Visa and passport","Forex and money transfer","Certificate attestation","PAN and Udyam","GST, ITR, digital signature","Company and licence work","RTO and certificates"];
+const sel=document.getElementById("serviceSel");
+SERVICE_NAMES.forEach(n=>sel.add(new Option(n,n)));
+
+/* ---------- service carousel ---------- */
+(function(){
+  const sec=document.getElementById("services"),car=document.getElementById("car"),track=document.getElementById("track"),tabsEl=document.getElementById("tabs2");
+  const slides=[...track.querySelectorAll(".slide")];
+  const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let cur=-1,auto=!reduce,lockUntil=0,hov=false,foc=false,vis=true;
+  slides.forEach((s,i)=>{
+    const b=document.createElement("button");b.type="button";b.className="tb";b.setAttribute("role","tab");
+    b.innerHTML=s.dataset.short+"<i></i>";b.addEventListener("click",()=>go(i));tabsEl.appendChild(b);
+    try{s.querySelector("svg").pauseAnimations()}catch(e){}
+  });
+  const tb=[...tabsEl.children];
+  function setActive(i){
+    if(i===cur)return;cur=i;
+    slides.forEach((s,k)=>{
+      const on=k===i;s.classList.toggle("on",on);
+      try{const v=s.querySelector("svg");on?v.unpauseAnimations():v.pauseAnimations()}catch(e){}
+    });
+    tb.forEach((t,k)=>{t.classList.remove("on");t.setAttribute("aria-selected",k===i)});
+    void tabsEl.offsetWidth;tb[i].classList.add("on");
+  }
+  function target(i){const s=slides[i];return s.offsetLeft-(track.clientWidth-s.clientWidth)/2}
+  function go(i){
+    i=(i+slides.length)%slides.length;setActive(i);
+    lockUntil=performance.now()+900;
+    track.scrollTo({left:target(i),behavior:reduce?"auto":"smooth"});
+  }
+  let raf=0;
+  track.addEventListener("scroll",()=>{
+    if(performance.now()<lockUntil)return;
+    cancelAnimationFrame(raf);
+    raf=requestAnimationFrame(()=>{
+      const c=track.scrollLeft+track.clientWidth/2;let best=0,d=1e9;
+      slides.forEach((s,k)=>{const dd=Math.abs(s.offsetLeft+s.clientWidth/2-c);if(dd<d){d=dd;best=k}});
+      setActive(best);
+    });
+  },{passive:true});
+  track.addEventListener("click",e=>{
+    const s=e.target.closest(".slide");if(!s||s.classList.contains("on"))return;
+    e.preventDefault();e.stopPropagation();go(slides.indexOf(s));
+  },true);
+  document.getElementById("prev").addEventListener("click",()=>go(cur-1));
+  document.getElementById("next").addEventListener("click",()=>go(cur+1));
+  track.addEventListener("keydown",e=>{
+    if(e.key==="ArrowRight"){e.preventDefault();go(cur+1)}
+    if(e.key==="ArrowLeft"){e.preventDefault();go(cur-1)}
+  });
+  tabsEl.addEventListener("animationend",e=>{if(e.target.tagName==="I"&&auto)go(cur+1)});
+  function hold(){sec.classList.toggle("hold",hov||foc||!vis)}
+  [car,tabsEl].forEach(el=>{
+    el.addEventListener("mouseenter",()=>{hov=true;hold()});
+    el.addEventListener("mouseleave",()=>{hov=false;hold()});
+    el.addEventListener("focusin",()=>{foc=true;hold()});
+    el.addEventListener("focusout",()=>{foc=false;hold()});
+  });
+  track.addEventListener("touchstart",()=>{auto=false},{passive:true});
+  if("IntersectionObserver" in window){
+    new IntersectionObserver(es=>{vis=es[0].isIntersecting;hold()},{threshold:.25}).observe(sec);
+  }
+  addEventListener("resize",()=>track.scrollTo({left:target(Math.max(cur,0))}));
+  setActive(0);
+})();
+
+/* partner logos: official SVGs go in site/logos/, text name shows until a file exists */
+const PARTNERS=[
+  ["MakeMyTrip","makemytrip.svg"],["EaseMyTrip","easemytrip.svg"],["Cleartrip","cleartrip.svg"],
+  ["Akbar Travels","akbar-travels.svg"],["Alhind Travels","alhind-travels.svg"],["Riya Connect","riya-connect.png"],
+  ["IRCTC","irctc.svg"],["Unimoni","unimoni.png","dark"],["abhibus","abhibus.png"],["Bank of Baroda BC Point","bank-of-baroda.svg"]
+];
+const lEl=document.getElementById("logos");
+function tile([name,file,theme],dup){
+  const d=document.createElement("div");d.className="logo"+(theme==="dark"?" dk":"");
+  if(dup)d.setAttribute("aria-hidden","true");
+  const img=new Image();img.alt=dup?"":name;
+  img.onerror=()=>d.classList.add("nofile");
+  img.onload=()=>{if(img.naturalWidth===img.naturalHeight)img.classList.add("sq")};
+  img.src="logos/"+file;
+  const wm=document.createElement("span");wm.className="wm";wm.textContent=name;
+  d.append(img,wm);return d;
+}
+function row(list,cls){
+  const m=document.createElement("div");m.className="marq "+cls;
+  const t=document.createElement("div");t.className="mq-track";
+  list.forEach(p=>t.appendChild(tile(p,false)));
+  list.forEach(p=>t.appendChild(tile(p,true)));
+  m.appendChild(t);lEl.appendChild(m);
+}
+row(PARTNERS,"fwd");
+row(PARTNERS.slice().reverse(),"back");
+
+document.addEventListener("click",e=>{
+  const a=e.target.closest("[data-wa]");if(!a)return;
+  e.preventDefault();window.open(wa(tag(a.dataset.wa)),"_blank","noopener");
+});
+document.getElementById("lead").addEventListener("submit",e=>{
+  e.preventDefault();
+  const f=new FormData(e.target);
+  const L=["Hi E2E, enquiry from website:","Name: "+f.get("name"),"Service: "+f.get("service")];
+  if(f.get("date"))L.push("Date: "+f.get("date"));
+  if(f.get("guests"))L.push("Guests: "+f.get("guests"));
+  if(f.get("notes"))L.push("Details: "+f.get("notes"));
+  window.open(wa(tag(L.join("\n"))),"_blank","noopener");
+});
+
+/* ---------- scroll reveal ---------- */
+(function(){
+  const els=document.querySelectorAll(".rev");
+  if(!("IntersectionObserver" in window)){els.forEach(e=>e.classList.add("in"));return}
+  const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{threshold:.12});
+  els.forEach(e=>io.observe(e));
+})();
+</script>
+</body>
+</html>
