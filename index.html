@@ -231,7 +231,23 @@ textarea{min-height:96px;resize:vertical}
 footer{background:var(--ink);color:#93a0ba;padding:34px 0 100px;font-size:.88rem}
 footer .wrap{display:flex;flex-wrap:wrap;gap:12px 40px;justify-content:space-between}
 footer b{color:#fff}
-.sticky{position:fixed;right:16px;bottom:16px;z-index:30;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+/* floating whatsapp button */
+.wa-fab{position:fixed;right:18px;bottom:18px;z-index:40;display:flex;align-items:center;gap:12px;text-decoration:none}
+.wa-ico{position:relative;width:62px;height:62px;border-radius:50%;background:linear-gradient(145deg,#2fe27c,#12a150);display:grid;place-items:center;box-shadow:0 10px 26px rgba(18,161,80,.55),0 2px 6px rgba(0,0,0,.3);animation:wa-hop 5s ease-in-out 2s infinite;transition:transform .2s ease}
+.wa-ico::before,.wa-ico::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #25d366;opacity:0;animation:wa-ring 2.6s ease-out infinite}
+.wa-ico::after{animation-delay:1.3s}
+.wa-fab:hover .wa-ico{transform:scale(1.12);animation-play-state:paused}
+.wa-fab:active .wa-ico{transform:scale(.95)}
+.wa-ico svg{display:block}
+.wa-badge{position:absolute;top:-3px;right:-3px;min-width:20px;height:20px;border-radius:10px;background:#ef4444;color:#fff;font:700 .72rem/20px system-ui,sans-serif;text-align:center;font-style:normal;border:2px solid var(--bg);animation:wa-badge 5s ease-in-out 2s infinite}
+.wa-tip{background:#fff;color:#111a2c;font-weight:600;font-size:.88rem;padding:10px 16px;border-radius:14px 14px 4px 14px;box-shadow:0 10px 30px rgba(0,0,0,.28);white-space:nowrap;opacity:0;transform:translateX(14px) scale(.9);transform-origin:right center;pointer-events:none;animation:wa-tip 11s ease 3s 1 both;transition:opacity .2s,transform .2s}
+.wa-fab:hover .wa-tip,.wa-fab:focus-visible .wa-tip{animation:none;opacity:1;transform:none}
+@keyframes wa-ring{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.9);opacity:0}}
+@keyframes wa-hop{0%,86%,100%{transform:translateY(0)}90%{transform:translateY(-12px)}94%{transform:translateY(0)}97%{transform:translateY(-5px)}}
+@keyframes wa-badge{0%,86%,100%{transform:scale(1)}92%{transform:scale(1.3)}}
+@keyframes wa-tip{0%{opacity:0;transform:translateX(14px) scale(.9)}8%,70%{opacity:1;transform:none}80%,100%{opacity:0;transform:translateX(14px) scale(.9)}}
+@media(max-width:520px){.wa-tip{display:none}.wa-ico{width:58px;height:58px}}
+@media (prefers-reduced-motion: reduce){.wa-ico,.wa-badge{animation:none}.wa-ico::before,.wa-ico::after{animation:none}.wa-tip{animation:none}}
 
 .js .rev{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
 .js .rev.in{opacity:1;transform:none}
@@ -552,7 +568,13 @@ footer b{color:#fff}
   <div>Services and partner availability may vary.<br>Fares and rates are confirmed at booking.</div>
 </div></footer>
 
-<a class="btn btn-wa sticky" data-wa="Hi E2E, I have an enquiry." href="#">WhatsApp</a>
+<a class="wa-fab" data-wa="Hi E2E, I have an enquiry." href="#" aria-label="Chat with us on WhatsApp">
+  <span class="wa-tip">Chat with us on WhatsApp</span>
+  <span class="wa-ico">
+    <svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true"><path fill="#fff" d="M16 3.2A12.7 12.7 0 0 0 5 22.3L3.4 28.6l6.5-1.7A12.7 12.7 0 1 0 16 3.2Zm0 2.3a10.4 10.4 0 1 1-5.3 19.4l-.4-.2-3.8 1 1-3.7-.3-.4A10.4 10.4 0 0 1 16 5.5Z"/><path fill="#fff" d="M21.9 18.7c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.6 8.6 0 0 1-4.3-3.8c-.3-.6.3-.6.9-1.7.1-.2.1-.4 0-.5l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.7 3.7 0 0 0-1.1 2.7 6.4 6.4 0 0 0 1.4 3.4 14.6 14.6 0 0 0 5.6 4.9c2 .8 2.8.9 3.8.7a3.2 3.2 0 0 0 2.1-1.5 2.6 2.6 0 0 0 .2-1.5c-.1-.1-.3-.2-.6-.4Z"/></svg>
+    <i class="wa-badge">1</i>
+  </span>
+</a>
 
 <script>
 /* ---------- content + WhatsApp ---------- */
